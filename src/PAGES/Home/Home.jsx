@@ -23,8 +23,8 @@ const Home = () => {
 
                 <section className='HERO-SECTION bg-[#F9F3F0] -top-36 h-[1000px] relative overflow-hidden '>
                     <div className='BACKGROUND-IMG'>
-                        <img className='absolute right-96 -bottom-20' src="./src/assets/Home/asset 8.png" alt="" />
-                        <img className='absolute right-10 -bottom-12' src="./src/assets/Home/asset 9.png" alt="" />
+                        <img className='absolute right-[700px] -bottom-20' src="./src/assets/Home/asset 8.png" alt="" />
+                        <img className='absolute right-[200px] -bottom-12' src="./src/assets/Home/asset 9.png" alt="" />
                     </div>
                     <div className="container mx-auto">
                         <div className='BACKGROUND-DETAIL absolute top-96'>

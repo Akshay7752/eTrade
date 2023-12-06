@@ -46,7 +46,7 @@ export default function AllPages() {
     <>
       {/* HOME-SECTION-COMPONENTS */}
 
-      {/* <Home/>  */}
+      <Home/> 
 
 
       {/* SHOP-SECTION-COMPONENTS  */}
@@ -90,7 +90,7 @@ export default function AllPages() {
       {/* <QuotePost/> */}
 
       {/* CONTACT-SECTION-COMPONENT  */}
-      <Contact /> 
+      {/* <Contact />  */}
     </>
   )
 }
