@@ -46,7 +46,7 @@ export default function AllPages() {
     <>
       {/* HOME-SECTION-COMPONENTS */}
 
-      <Home/> 
+      {/* <Home/>  */}
 
 
       {/* SHOP-SECTION-COMPONENTS  */}
@@ -59,7 +59,7 @@ export default function AllPages() {
       {/* <ProductV4 /> */}
       {/* <ProductV5 /> */}
       {/* <ProductV6 /> */}
-      {/* <ProductV7 /> */}
+      <ProductV7 />
 
 
       {/* PAGES-SECTION-COMPONENTS  */}
