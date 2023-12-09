@@ -6,7 +6,7 @@ import Speaker from '../../Components/Speaker'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 
-const ShopWithSidebar = () => {
+const   ShopWithSidebar = () => {
     return (
         <>
             <div>

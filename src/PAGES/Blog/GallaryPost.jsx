@@ -4,7 +4,7 @@ import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 
-const GallaryPost = () => {
+const GalleryPost = () => {
     return (
         <>
             <div>
@@ -350,4 +350,4 @@ const GallaryPost = () => {
     )
 }
 
-export default GallaryPost
+export default GalleryPost

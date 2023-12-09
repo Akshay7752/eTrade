@@ -5,6 +5,7 @@ import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import Speaker from '../../Components/Speaker'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
+import { Link } from 'react-router-dom'
 
 const Account = () => {
     return (
@@ -53,7 +54,7 @@ const Account = () => {
                                     <a className='flex items-center text-xl hover:text-[#3577F0] h-12 px-6 duration-300' href=""><i class="fa-solid fa-user"></i><span className='text-sm font-semibold ml-4'>Account Details</span></a>
                                 </div>
                                 <div className='text-gray-500 hover:bg-[#F6F7FB] rounded-md cursor-pointer duration-300'>
-                                    <a className='flex items-center text-xl hover:text-[#3577F0] h-12 px-6 duration-300' href=""><i class="ri-logout-box-r-line"></i><span className='text-sm font-semibold ml-4'>Logout</span></a>
+                                    <Link to="/SignIn" className='flex items-center text-xl hover:text-[#3577F0] h-12 px-6 duration-300' href=""><i class="ri-logout-box-r-line"></i><span className='text-sm font-semibold ml-4'>Logout</span></Link>
                                 </div>
                             </div>
                         </div>

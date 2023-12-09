@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SignIn = () => {
     return (
@@ -8,7 +9,7 @@ const SignIn = () => {
                     <img src="../src/assets/pages/sign in/asset 0.png" alt="" />
                     <div className='flex items-center'>
                         <p className='text-[#292930] text-sm font-medium'>Not a member?</p>
-                        <a href="#" className=" relative px-12 py-5  rounded-md font-semibold ml-10 text-white bg-[#ff497c] 
+                        <Link to="/SignUp" href="#" className=" relative px-12 py-5  rounded-md font-semibold ml-10 text-white bg-[#ff497c] 
                         before:absolute 
                         before:content-[''] 
                         before:w-[190px] 
@@ -21,7 +22,7 @@ const SignIn = () => {
                         before:-z-10 
                         before:hover:scale-110  
                         before:duration-300
-                         ">Sign Up Now</a>
+                         ">Sign Up Now</Link>
                     </div>
                 </div>
 

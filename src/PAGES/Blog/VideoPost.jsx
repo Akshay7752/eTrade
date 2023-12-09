@@ -225,7 +225,7 @@ const VideoPost = () => {
 
                                 <div className='BOX-3 border p-8 rounded-md mt-14'>
                                     <h1 className='text-[#292930] text-xl font-medium mb-8 '>Search</h1>
-                                    <div class=" text-gray-500 rounded-md bg-[#F0F2F5] border focus-within:border-[#3577F0] duration-500" jujjuj>
+                                    <div class=" text-gray-500 rounded-md bg-[#F0F2F5] border focus-within:border-[#3577F0] duration-500">
                                         <i class="ri-search-line mx-5 text-lg"></i>
                                         <input className=' py-4 bg-[#F0F2F5] outline-none  caret-transparent focus:caret-black' type="text" placeholder='Search' />
                                     </div>
@@ -293,7 +293,7 @@ const VideoPost = () => {
                         </div>
                         <div className='flex justify-between items-center mb-10'>
                             <h1 className="font-bold text-4xl text-[#292930] mb-[30px]">Related Blog</h1>
-                            <div className='text-gray-400'> 
+                            <div className='text-gray-400'>
                                 <div className='hover:scale-110 duration-300 inline-block'>
                                     <a href="#" className=''><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></a>
                                 </div>

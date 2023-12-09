@@ -7,6 +7,7 @@ import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 
 import '../Home/HomeStyle.css'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -24,15 +25,90 @@ const Home = () => {
                 <section className='HERO-SECTION bg-[#F9F3F0] -top-36 h-[1000px] relative overflow-hidden '>
                     <div className='BACKGROUND-IMG'>
                         <img className='absolute right-[700px] -bottom-20' src="./src/assets/Home/asset 8.png" alt="" />
-                        <img className='absolute right-[200px] -bottom-12' src="./src/assets/Home/asset 9.png" alt="" />
+                        <img className='absolute right-[100px] -bottom-12' src="./src/assets/Home/asset 9.png" alt="" />
+                        <div>
+                            <div className='absolute right-[450px] bottom-40'>
+                                <img className=' ' src="./src/assets/Home/asset 6.png" alt="" />
+                                <div className='absolute top-[15%] left-[30%] bg-white rounded-full'>
+                                    <div className='h-28 w-28 flex justify-center items-center'>
+                                        <div>
+                                            <h1 className='text-gray-500 text-lg text-center'>From</h1>
+                                            <h1 className='text-[#3577F0] text-xl  font-semibold'>$49.00</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img className='w-40 absolute right-[270px] bottom-32' src="./src/assets/Home/asset 7.png" alt="" />
+                            </div>
+                        </div>
+                        <div className='absolute left-[45%] bottom-10'>
+                            <ul>
+                                <li className='w-[34px] h-[4px] bg-[#FE98AC] rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                                <li className='w-[25px] h-[4px] bg-white rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                                <li className='w-[25px] h-[4px] bg-white rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                                <li className='w-[25px] h-[4px] bg-white rounded-lg inline-block mx-1 cursor-pointer' ></li>
+                            </ul>
+                        </div>
                     </div>
                     <div className="container mx-auto">
-                        <div className='BACKGROUND-DETAIL absolute top-96'>
+                        <div className='BACKGROUND-DETAIL-HEADPHONE absolute top-96'>
                             <div className='flex mb-4'>
                                 <i className="ri-fire-fill h-6 w-6 text-base bg-[#FF497C] text-white rounded-full flex items-center justify-center"></i>
                                 <h1 className='text-[#FF497C] font-bold text-sm flex items-center ml-2'> Hot Deal In This Week</h1>
                             </div>
                             <p className='font-bold text-6xl text-[#292930] tracking-wide leading-[75px] mb-10'>Roco Wireless<br /> Headphone</p>
+
+                            <div className='flex items-center'>
+                                <div className="BUTTON">
+                                    <Link to="/ShopNoSidebar" href="#" className="px-9 py-5 z-10 bg-white font-bold rounded-md relative 
+                                before:absolute
+                                before:contetn-['']
+                                before:px-10
+                                before:py-5
+                                 before:bg-white
+                                before:left-0
+                                before:top-0
+                                before:right-0
+                                before:bottom-0
+                                before:rounded-md
+                                before:-z-10
+                                before:hover:scale-110
+                                before:duration-300">
+                                        <i class="ri-shopping-cart-line mr-2"></i> Shop Now</Link>
+                                </div>
+
+                                <div className='flex ml-8'>
+                                    <div className="IMAGES-CIRCLE">
+                                        <ul className="flex">
+                                            <li className=" border-2 rounded-full "><img src="./src/assets/Home/asset 2.png" alt="" /></li>
+                                            <li className="-ml-5 border-2 rounded-full border-white"><img src="./src/assets/Home/asset 3.png" alt="" /></li>
+                                            <li className="-ml-5 border-2 rounded-full border-white"><img src="./src/assets/Home/asset 4.png" alt="" /></li>
+                                            <li className="-ml-5 border-2 rounded-full border-white" ><img src="./src/assets/Home/asset 5.png" alt="" /></li>
+                                        </ul>
+                                    </div>
+                                    <div className='STARS ml-5'>
+                                        <span className='text-[#FFA800]'>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-line"></i>
+                                        </span>
+                                        <div>
+                                            <h1 className='text-xs font-bold'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className='BACKGROUND-DETAIL-WATCH absolute top-96 hidden'>
+                            <div className='flex mb-4'>
+                                <i className="ri-fire-fill h-6 w-6 text-base bg-[#FF497C] text-white rounded-full flex items-center justify-center"></i>
+                                <h1 className='text-[#FF497C] font-bold text-sm flex items-center ml-2'> Hot Deal In This Week</h1>
+                            </div>
+                            <p className='font-bold text-6xl text-[#292930] tracking-wide leading-[75px] mb-10'>Smart Digital<br /> Watch</p>
 
                             <div className='flex items-center'>
                                 <div className="BUTTON">
@@ -311,8 +387,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 
@@ -339,8 +415,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 
@@ -367,8 +443,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 
@@ -395,8 +471,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 
@@ -423,8 +499,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 
@@ -451,8 +527,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 
@@ -479,8 +555,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 
@@ -507,8 +583,8 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div >
-                                    <a href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
-                                    <a href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></a>
+                                    <Link to="/Cart" href="#" className='block mb-6'><i class="ri-shopping-cart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
+                                    <Link to="/Wishlist" href="#" ><i class="ri-heart-line  p-3 rounded-md border text-gray-600 hover:text-white hover:bg-[#3577F0] hover:border-none hover:duration-500"></i></Link>
                                 </div>
                             </div>
 

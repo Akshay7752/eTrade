@@ -4,6 +4,7 @@ import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import Speaker from '../../Components/Speaker'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
+import { Link } from 'react-router-dom'
 
 
 const BlogList = () => {
@@ -44,7 +45,7 @@ const BlogList = () => {
                                     </div>
                                     <p className='text-base text-gray-500 leading-7'>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
                                     <div className='mt-14'>
-                                        <a href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
+                                        <Link to="/StandardPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
                                  before:absolute 
                                  before:content-[''] 
                                  before:rounded-md 
@@ -56,13 +57,13 @@ const BlogList = () => {
                                  before:-z-10 
                                  before:hover:scale-110  
                                  before:duration-300
-                                ">Read More</a>
+                                ">Read More</Link>
                                     </div>
                                 </div>
                             </div>
 
                             <div className='BOX-2 border-b border-gray-100 py-16'>
-                                <div className='mb-10'>
+                                <div className='mb-10 relative'>
                                     <img className='bg-cover w-full h-[450px] rounded-md' src="../src/assets/blog/blog-list/asset 4.png" alt="" />
                                 </div>
 
@@ -79,19 +80,19 @@ const BlogList = () => {
                                     </div>
                                     <p className='text-base text-gray-500 leading-7'>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
                                     <div className='mt-14'>
-                                        <a href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
-                                            before:absolute 
-                                            before:content-[''] 
-                                            before:rounded-md 
-                                            before:left-0 
-                                            before:right-0 
-                                            before:top-0 
-                                            before:bottom-0 
-                                            before:bg-[#3577F0]  
-                                            before:-z-10 
-                                            before:hover:scale-110  
-                                            before:duration-300
-                                            ">Read More</a>
+                                    <Link to="/StandardPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
+                                 before:absolute 
+                                 before:content-[''] 
+                                 before:rounded-md 
+                                 before:left-0 
+                                 before:right-0 
+                                 before:top-0 
+                                 before:bottom-0 
+                                 before:bg-[#3577F0]  
+                                 before:-z-10 
+                                 before:hover:scale-110  
+                                 before:duration-300
+                                ">Read More</Link>
                                     </div>
                                 </div>
                             </div>
@@ -132,22 +133,21 @@ const BlogList = () => {
                                     </div>
                                     <p className='text-base text-gray-500 leading-7'>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
                                     <div className='mt-14'>
-                                        <a href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
-                                            before:absolute 
-                                            before:content-[''] 
-                                            before:rounded-md 
-                                            before:left-0 
-                                            before:right-0 
-                                            before:top-0 
-                                            before:bottom-0 
-                                            before:bg-[#3577F0]  
-                                            before:-z-10 
-                                            before:hover:scale-110  
-                                            before:duration-300
-                                            ">Read More</a>
+                                    <Link to="/StandardPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
+                                 before:absolute 
+                                 before:content-[''] 
+                                 before:rounded-md 
+                                 before:left-0 
+                                 before:right-0 
+                                 before:top-0 
+                                 before:bottom-0 
+                                 before:bg-[#3577F0]  
+                                 before:-z-10 
+                                 before:hover:scale-110  
+                                 before:duration-300
+                                ">Read More</Link>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div className='BOX-5 pt-16'>
@@ -174,19 +174,19 @@ const BlogList = () => {
                                     </div>
                                     <p className='text-base text-gray-500 leading-7'>The Converse x AMBUSH® CTAS Duck Boot and Chuck 70 Fuzzy release November 21 in Greater China. A global release follows <br /> November 24.</p>
                                     <div className='mt-14'>
-                                        <a href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
-                                            before:absolute 
-                                            before:content-[''] 
-                                            before:rounded-md 
-                                            before:left-0 
-                                            before:right-0 
-                                            before:top-0 
-                                            before:bottom-0 
-                                            before:bg-[#3577F0]  
-                                            before:-z-10 
-                                            before:hover:scale-110  
-                                            before:duration-300
-                                            ">Read More</a>
+                                    <Link to="/StandardPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
+                                 before:absolute 
+                                 before:content-[''] 
+                                 before:rounded-md 
+                                 before:left-0 
+                                 before:right-0 
+                                 before:top-0 
+                                 before:bottom-0 
+                                 before:bg-[#3577F0]  
+                                 before:-z-10 
+                                 before:hover:scale-110  
+                                 before:duration-300
+                                ">Read More</Link>
                                     </div>
                                 </div>
                             </div>
@@ -226,28 +226,28 @@ const BlogList = () => {
                                 <h1 className='text-[#292930] text-xl font-medium mb-8'>Latest Posts</h1>
                                 <div className='flex  border-b border-gray-100 pb-5'>
                                     <div className='rounded-lg overflow-hidden'>
-                                        <img className='bg-cover rounded-lg h-20 w-[170px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 9.png" alt="" />
+                                    <Link to="/StandardPost"><img className='bg-cover rounded-lg h-20 w-[170px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 9.png" alt="" /></Link>
                                     </div>
                                     <div className='ml-10'>
-                                        <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Dubai’s FRAME Offers its Take on the</a>
+                                        <Link to="/StandardPost"><a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Dubai’s FRAME Offers its Take on the</a></Link>
                                         <h1 className='text-sm text-gray-500 mt-3'>Mar 27, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
                                     </div>
                                 </div>
                                 <div className='flex  border-b border-gray-100 py-5'>
                                     <div className='rounded-lg overflow-hidden'>
-                                        <img className='bg-cover rounded-lg h-20 w-[188px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 10.png" alt="" />
+                                    <Link to="/StandardPost"><img className='bg-cover rounded-lg h-20 w-[188px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 10.png" alt="" /></Link>
                                     </div>
                                     <div className='ml-10'>
-                                        <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Apple presents App Best of 2020 winners</a>
+                                    <Link to="/StandardPost"><a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Apple presents App Best of 2020 winners</a></Link>
                                         <h1 className='text-sm text-gray-500 mt-3'>Mar 20, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
                                     </div>
                                 </div>
                                 <div className='flex pt-5'>
                                     <div className='rounded-lg overflow-hidden'>
-                                        <img className='bg-cover rounded-lg h-20 w-[200px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 11.png" alt="" />
+                                        <Link to="/StandardPost"><img className='bg-cover rounded-lg h-20 w-[200px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 11.png" alt="" /></Link>
                                     </div>
                                     <div className='ml-10'>
-                                        <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Gallaudet University innovation in education</a>
+                                    <Link to="/StandardPost"><a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Gallaudet University innovation in education</a></Link>
                                         <h1 className='text-sm text-gray-500 mt-3'>Mar 15, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
                                     </div>
                                 </div>
