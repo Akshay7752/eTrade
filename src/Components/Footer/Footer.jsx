@@ -111,19 +111,19 @@ const Footer = () => {
                 <div className='flex justify-between items-center mt-10 pb-5'>
                     <div className='text-2xl text-gray-600 flex justify-between w-[160px] h-10'>
                         <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-                            <li className='nav-icon flex justify-center items-center rounded-full'><i class="ri-facebook-fill text-lg"></i></li>
+                            <li className='nav-icon flex justify-center items-center rounded-full'><a href='#top'><i class="ri-facebook-fill text-lg"></i></a></li>
                         </ul>
                         <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-                            <li className='nav-icon flex justify-center items-center rounded-full'><i class="ri-instagram-line text-lg"></i></li>
+                            <li className='nav-icon flex justify-center items-center rounded-full'><a href='#top'><i class="ri-instagram-line text-lg"></i></a></li>
                         </ul>
                         <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-                            <li className='nav-icon flex justify-center items-center rounded-full'><i class="ri-twitter-fill text-lg"></i></li>
+                            <li className='nav-icon flex justify-center items-center rounded-full'><a href='#top'><i class="ri-twitter-fill text-lg"></i></a></li>
                         </ul>
                         <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-                            <li className='nav-icon flex justify-center items-center rounded-full '><i class="ri-linkedin-fill text-lg"></i></li>
+                            <li className='nav-icon flex justify-center items-center rounded-full '><a href='#top'><i class="ri-linkedin-fill text-lg"></i></a></li>
                         </ul>
                         <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
-                            <li className='nav-icon flex justify-center items-center rounded-full'><i class="ri-discord-line text-lg"></i></li>
+                            <li className='nav-icon flex justify-center items-center rounded-full'><a href='#top'><i class="ri-discord-line text-lg"></i></a></li>
                         </ul>
                     </div>
 

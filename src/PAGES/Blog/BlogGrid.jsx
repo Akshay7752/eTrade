@@ -10,7 +10,7 @@ const BlogGrid = () => {
     return (
         <>
             <div>
-                <section className='BLOG-DROPDOWN'>
+                <section className='BLOG-DROPDOWN' id='#top'>
                     <AllTopBar />
                 </section>
 

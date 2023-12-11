@@ -36,7 +36,7 @@ export const AllNavBar = () => {
                             <button className='navbar-button font-semibold h-24'>Shop</button>
                             <i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i>
                             <div className='home-content'>
-                                <ul className='list bg-white rounded-md'>
+                                <ul className='list bg-white rounded-md'> 
                                     <li><Link to="/ShopWithSidebar" className='hover:text-[#ff497c]' href="">Shop With Sidebar</Link></li>
                                     <li><Link to="/ShopNoSidebar" className='hover:text-[#ff497c]' href="">Shop No Sidebar</Link></li>
                                     <li><Link to="/ProductV1" className='hover:text-[#ff497c]' href="">Product Variation 1</Link></li>
