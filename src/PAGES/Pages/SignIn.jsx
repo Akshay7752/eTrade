@@ -5,8 +5,8 @@ const SignIn = () => {
     return (
         <>
             <div className='photo-section '>
-                <div className=' flex items-center justify-between  px-[100px] py-[40px] '>
-                    <img src="../src/assets/pages/sign in/asset 0.png" alt="" />
+                <div className=' flex items-center justify-between  px-[100px] py-[40px] '> 
+                    <Link to="/"><img src="../src/assets/pages/sign in/asset 0.png" alt="" /></Link>
                     <div className='flex items-center'>
                         <p className='text-[#292930] text-sm font-medium'>Not a member?</p>
                         <Link to="/SignUp" href="#" className=" relative px-12 py-5  rounded-md font-semibold ml-10 text-white bg-[#ff497c] 
