@@ -43,6 +43,9 @@ export default function AllPages() {
   return (
     <>
       {/* HOME-SECTION-COMPONENTS */}
+      <div className="select-none">
+
+      
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -93,6 +96,7 @@ export default function AllPages() {
           <Route path="/TermsOfUse" element={<TermsOfUse />}></Route>
         </Routes>
       </BrowserRouter>
+      </div>
     </>
   );
 }

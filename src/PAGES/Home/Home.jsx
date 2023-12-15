@@ -301,12 +301,13 @@ const Home = () => {
 
                             <div className='grid grid-cols-3 gap-10'>
                                 <div>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg'>
+                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative'>
                                         <p>“ It’s amazing how much easier it has been to
                                             meet new people and create instantly non
                                             connections. I have the exact same personal
                                             the only thing that has changed is my mind
                                             set and a few behaviors. “</p>
+                                            <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
                                     </div>
                                     <div className='flex items-center mt-10'>
                                         <img src="./src/assets/home/asset 31.png" alt="" />
@@ -317,12 +318,13 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className='mt-10'>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg'>
+                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative'>
                                         <p>“ It’s amazing how much easier it has been to
                                             meet new people and create instantly non
                                             connections. I have the exact same personal
                                             the only thing that has changed is my mind
                                             set and a few behaviors. “</p>
+                                            <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
                                     </div>
                                     <div className='flex items-center mt-10'>
                                         <img src="./src/assets/home/asset 29.png" alt="" />
@@ -333,12 +335,13 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg'>
+                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative'>
                                         <p>“ It’s amazing how much easier it has been to
                                             meet new people and create instantly non
                                             connections. I have the exact same personal
                                             the only thing that has changed is my mind
                                             set and a few behaviors. “</p>
+                                            <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
                                     </div>
                                     <div className='flex items-center mt-10'>
                                         <img src="./src/assets/home/asset 30.png" alt="" />

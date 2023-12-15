@@ -145,7 +145,7 @@ export const NavBottom = () => {
                     <a className=' font-bold '>STUDENT NOW GET 10% OFF : <span className='underline hover:text-[#FF497C] duration-700'>GET OFFER</span></a>
                     <i class="ri-arrow-right-line ml-10"></i>
                 </div>
-            </div >
+            </div>
         </>
     )
 }
