@@ -111,7 +111,7 @@ const Checkout = () => {
                                     <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Country/ Region <span className='text-[#E76458] ml-1'>*</span></label>
                                     <div className='border border-gray-300  rounded-md font-normal '>
                                         <select name="" id="" className='w-full  px-10 py-5 outline-none border-r-[40px] border-white rounded-md' >
-                                            <option value="">Australia</option>
+                                            <option value="">India</option>
                                             <option value="">England</option>
                                             <option value="">New Zealand</option>
                                             <option value="">Switzerland</option>
@@ -164,10 +164,10 @@ const Checkout = () => {
 
                                     <div className='hidden'>
                                         <div className='relative text-gray-500  mb-8'>
-                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm' >Country/ Region <span className='text-[#E76458] ml-1'>*</span></label>
+                                            <label className='absolute -top-3 left-7 bg-white px-2 font-semi`bold text-sm' >Country/ Region <span className='text-[#E76458] ml-1'>*</span></label>
                                             <div className='border border-gray-300  rounded-md font-normal '>
                                                 <select name="" id="" className='w-full  px-10 py-5 outline-none border-r-[40px] border-white rounded-md' >
-                                                    <option value="">Australia</option>
+                                                    <option value="">India</option>
                                                     <option value="">England</option>
                                                     <option value="">New Zealand</option>
                                                     <option value="">Switzerland</option>
