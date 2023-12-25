@@ -83,9 +83,9 @@ export const AllRightpart = () => {
 export const AllTopBar = () => {
   return (
     <>
-      <div className=' py-2 bg-[#292930]'>
+      <div className=' py-2 bg-[#292930]' id='top-scroll'>
           <div className='flex justify-between items-center container mx-auto'>
-            <div className='flex'>
+            <div className='flex '>
               <AllDropdownHover1 />
               <AllDropdownHover2 />
             </div>

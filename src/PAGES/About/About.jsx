@@ -103,7 +103,7 @@ const About = () => {
                                 >
                                     <SwiperSlide>
                                         <div>
-                                            <div className='rounded-md overflow-hidden'>
+                                            <div className='rounded-md overflow-hidden max-w-[330px]'>
                                                 <img className='bg-cover hover:scale-110 duration-300' src="../src/assets/about/asset 10.png" alt="" />
                                             </div>
                                             <h1 className='text-gray-500 mt-5'>Founder</h1>
@@ -112,7 +112,7 @@ const About = () => {
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <div className='rounded-md overflow-hidden'>
+                                            <div className='rounded-md overflow-hidden max-w-[330px]'>
                                                 <img className='bg-cover hover:scale-110 duration-300' src="../src/assets/about/asset 7.png" alt="" />
                                             </div>
                                             <h1 className='text-gray-500 mt-5'>CEO</h1>
@@ -121,7 +121,7 @@ const About = () => {
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <div className='rounded-md overflow-hidden'>
+                                            <div className='rounded-md overflow-hidden max-w-[330px]'>
                                                 <img className='bg-cover hover:scale-110 duration-300 ' src="../src/assets/about/asset 8.png" alt="" />
                                             </div>
                                             <h1 className='text-gray-500 mt-5'>Designer</h1>
@@ -130,7 +130,7 @@ const About = () => {
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <div className='rounded-md overflow-hidden'>
+                                            <div className='rounded-md overflow-hidden max-w-[330px]'>
                                                 <img className='bg-cover hover:scale-110 duration-300 ' src="../src/assets/about/asset 9.png" alt="" />
                                             </div>
                                             <h1 className='text-gray-500 mt-5'>Designer</h1>
@@ -139,7 +139,7 @@ const About = () => {
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div>
-                                            <div className='rounded-md overflow-hidden'>
+                                            <div className='rounded-md overflow-hidden max-w-[330px]'>
                                                 <img className='bg-cover hover:scale-110 duration-300' src="../src/assets/about/asset 7.png" alt="" />
                                             </div>
                                             <h1 className='text-gray-500 mt-5'>CEO</h1>

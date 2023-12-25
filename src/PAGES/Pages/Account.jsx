@@ -61,7 +61,7 @@ const Account = () => {
 
                         <div className='RIGHT-PART col-span-3 '>
                             <div className='DASHBOARD-DETAILS '>
-                                <h1 className='text-lg mb-10'>Hello Annie (not <span className='text-xl font-semibold'>Annie?</span>  <span className='text-[#E76458] hover:text-[#3577F0] cursor-pointer duration-300'>Log Out</span> )</h1>
+                                <h1 className='text-lg mb-10'>Hello Annie (not <span className='text-xl font-semibold'>Annie?</span>  <span className='text-[#E76458] hover:text-[#3577F0] cursor-pointer duration-300'><Link to="/SignIn">Log Out</Link></span> )</h1>
                                 <p className='text-gray-500 tracking-wider'>From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.</p>
                             </div>
 

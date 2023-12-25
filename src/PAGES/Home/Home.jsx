@@ -10,9 +10,10 @@ import '../Home/HomeStyle.css'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
+
     return (
         <>
-            <div className='Body bg-white '>
+            <div className='Body bg-white ' id='top-scroll'>
 
                 <section className='HOME-DROPDOWN py-2 '>
                     <TopBar />
@@ -175,7 +176,9 @@ const Home = () => {
                             </div>
                         </div>
 
+
                         <div className="grid grid-cols-7 gap-x-10 mt-10">
+
                             <div className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500">
                                 <div className="flex justify-center">
                                     <img className="mb-3" src="./src/assets/Home/asset 15.png" alt="" />
@@ -218,6 +221,7 @@ const Home = () => {
                                 </div>
                                 <p className='text-gray-800'>PC Gaming</p>
                             </div>
+
                         </div>
                     </div>
                 </section>
@@ -301,13 +305,13 @@ const Home = () => {
 
                             <div className='grid grid-cols-3 gap-10'>
                                 <div>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative'>
+                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative shadow-lg'>
                                         <p>“ It’s amazing how much easier it has been to
                                             meet new people and create instantly non
                                             connections. I have the exact same personal
                                             the only thing that has changed is my mind
                                             set and a few behaviors. “</p>
-                                            <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
+                                        <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
                                     </div>
                                     <div className='flex items-center mt-10'>
                                         <img src="./src/assets/home/asset 31.png" alt="" />
@@ -318,13 +322,13 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div className='mt-10'>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative'>
+                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative shadow-lg'>
                                         <p>“ It’s amazing how much easier it has been to
                                             meet new people and create instantly non
                                             connections. I have the exact same personal
                                             the only thing that has changed is my mind
                                             set and a few behaviors. “</p>
-                                            <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
+                                        <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
                                     </div>
                                     <div className='flex items-center mt-10'>
                                         <img src="./src/assets/home/asset 29.png" alt="" />
@@ -335,13 +339,13 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative'>
+                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative shadow-lg'>
                                         <p>“ It’s amazing how much easier it has been to
                                             meet new people and create instantly non
                                             connections. I have the exact same personal
                                             the only thing that has changed is my mind
                                             set and a few behaviors. “</p>
-                                            <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
+                                        <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
                                     </div>
                                     <div className='flex items-center mt-10'>
                                         <img src="./src/assets/home/asset 30.png" alt="" />
@@ -613,3 +617,4 @@ const Home = () => {
 }
 
 export default Home
+

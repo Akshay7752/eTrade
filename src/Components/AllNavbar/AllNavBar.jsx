@@ -1,10 +1,7 @@
 import React from 'react'
 import '../AllNavbar/AllNavstyle.css'
 import { Link, NavLink } from 'react-router-dom'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css/navigation';
-
+import Profile from '../Profile'
 
 export const AllNavBar = () => {
 
@@ -25,7 +22,7 @@ export const AllNavBar = () => {
                     {/* navbar list  */}
                     <div className='grid grid-cols-6 gap-x-10'>
                         <div className='home-dropdown'>
-                            <button className='font-semibold underline decoration-[2px] underline-offset-4 h-24 '><span className='text-gray-800 hover:text-black'>Home</span><i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
+                            <button className='font-semibold underline decoration-[2px] underline-offset-4 h-24 '><span className='text-gray-800 hover:text-black'>Home</span></button>
                             <div className='home-content shadow-lg rounded-md'>
                                 <ul className='list bg-white rounded-md'>
                                     <li><NavLink to="/"><a className='text-[#ff497c]' href=''>Home-Electronics</a></NavLink></li>
@@ -121,9 +118,12 @@ export const AllNavBar = () => {
                         <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
                             <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-shopping-cart-line "></i></li>
                         </ul>
-                        <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
+                        {/* <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
                             <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-user-3-line "></i></li>
-                        </ul>
+                        </ul> */}
+                        <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100'>
+                        <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><Profile /></li>
+                    </ul>
                     </div>
                 </div>
             </div>
@@ -145,7 +145,7 @@ export const NavBottom = () => {
                     <a className=' font-bold '>STUDENT NOW GET 10% OFF : <span className='underline hover:text-[#FF497C] duration-700'>GET OFFER</span></a>
                     <i class="ri-arrow-right-line ml-10"></i>
                 </div>
-            </div>
+            </div >
         </>
     )
 }

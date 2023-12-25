@@ -5,7 +5,7 @@ const SignIn = () => {
     return (
         <>
             <div className='photo-section '>
-                <div className=' flex items-center justify-between  px-[100px] py-[40px] '> 
+                <div className=' flex items-center justify-between  px-[100px] py-[40px] '>
                     <Link to="/"><img src="../src/assets/pages/sign in/asset 0.png" alt="" /></Link>
                     <div className='flex items-center'>
                         <p className='text-[#292930] text-sm font-medium'>Not a member?</p>
@@ -66,7 +66,7 @@ const SignIn = () => {
                         before:hover:scale-110  
                         before:duration-300 ">Sign In</a>
 
-                        <p className='text-sm text-[#3577F1] hover:text-gray-500 hover:cursor-pointer'>Forget password?</p>
+                        <Link to="/ForgotPassword" className='text-sm text-[#3577F1] hover:text-gray-500 hover:cursor-pointer'>Forget password?</Link>
                         
                     </div>
                 </form>

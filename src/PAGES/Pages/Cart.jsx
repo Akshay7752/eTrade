@@ -156,7 +156,6 @@ const Cart = () => {
                 <section className='PAGES-FOOTER'>
                     <Footer />
                 </section>
-            
             </div>
         </>
     )
