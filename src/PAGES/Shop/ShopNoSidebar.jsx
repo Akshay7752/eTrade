@@ -31,7 +31,7 @@ const ShopNoSidebar = () => {
                 <section className='container mx-auto mt-20 mb-10'>
                     <div className='flex justify-between px-7'>
                         <div className=''>
-                            <select name="option" id="option" placeholder='Categories' className='text-lg border-2 border-slate-300 rounded-md p-3 pr-3  m-2'>
+                            <select name="option" id="option" placeholder='Categories' className='text-lg border-2 border-slate-300 rounded-md p-3 pr-3 m-2'>
                                 <option value="a"><a href="">Categories</a></option>
                                 <option value="b"><a href="">Fashion</a></option>
                                 <option value="b"><a href="">Electronics</a></option>
@@ -69,9 +69,9 @@ const ShopNoSidebar = () => {
                             return (
                                 <>
                                     <div className='flex justify-center '>
-                                        <table className='relative'>
+                                        <table className='relative group'>
                                             <tr className=''>
-                                                <th className='group overflow-hidden rounded-xl '>
+                                                <th className='group overflow-hidden rounded-3xl'>
                                                     <img className='w-full h-72 group-hover:scale-110 duration-500 ' src={data.product_img} alt="" />
                                                 </th>
                                             </tr>
@@ -81,7 +81,7 @@ const ShopNoSidebar = () => {
                                                     <a className='text-lg font-semibold' href=''>{data.new_price} <span className='text-[#d6d6d6]'> <del> {data.old_price}</del></span></a>
                                                 </td>
                                             </tr>
-                                            <div className='absolute bottom-24 flex w-full justify-center items-center '>
+                                            <div className='absolute bottom-24 opacity-0 group-hover:opacity-100 group-hover:bottom-28 duration-500 flex w-full justify-center items-center '>
                                                 <div className='w-10 h-10 mr-2 hover:scale-110 duration-500 border bg-white rounded-md flex justify-center items-center'>
                                                     <i class="ri-heart-line "></i>
                                                 </div>
