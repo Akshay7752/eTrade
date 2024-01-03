@@ -6,9 +6,11 @@ const ForgotPassword = () => {
         <>
             <div className='photo-section '>
                 <div className=' flex items-center justify-between  px-[100px] py-[40px] '>
-                    <img src="../src/assets/pages/sign up/asset 0.png" alt="" />
+                    <Link to="/">
+                        <img src="../src/assets/pages/sign up/asset 0.png" alt="" />
+                    </Link>
                     <span className='w-72 '>
-                        <i class="ri-arrow-left-s-line border p-3 text-lg rounded-md hover:bg-[#3577F0] hover:text-white hover:duration-300 hover:border-none"></i>
+                        <Link to="/SignIn" class="ri-arrow-left-s-line border p-3 text-lg rounded-md hover:bg-[#3577F0] hover:text-white hover:duration-300 hover:border-none"></Link>
                     </span>
                     <div className='flex items-center'>
                         <p className='text-[#292930] text-sm font-medium'>Already a member?</p>

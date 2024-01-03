@@ -5,15 +5,40 @@ import HomeService from '../../Components/HomeService'
 import HomeHoverPhoto from '../../Components/HomeHoverPhoto'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
-
 import '../Home/HomeStyle.css'
 import { Link } from 'react-router-dom'
+import dataJson from '../../Data.json'
+
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import FeedBack from '../../Components/FeedBack'
+import DoubleSlide from '../../Components/DoubleSlide'
+import HomeSlideProduct from '../../Components/HomeSlideProduct'
+
 
 const Home = () => {
+    let slider;
+
+    const settings = {
+        speed: 1000,
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        infinite: true,
+        arrows: false
+    };
+
+    const handlePrev = () => {
+        slider.slickPrev();
+    };
+
+    const handleNext = () => {
+        slider.slickNext();
+    };
 
     return (
         <>
-            <div className='Body bg-white ' id='top-scroll'>
+            <div className='Body bg-white' id='top-scroll'>
 
                 <section className='HOME-DROPDOWN py-2 '>
                     <TopBar />
@@ -76,7 +101,7 @@ const Home = () => {
                                 before:-z-10
                                 before:hover:scale-110
                                 before:duration-300">
-                                        <i class="ri-shopping-cart-line mr-2"></i> Shop Now</Link>
+                                        <i class="ri-shopping-cart-line mr-2"></i>Shop Now </Link>
                                 </div>
 
                                 <div className='flex ml-8'>
@@ -113,7 +138,7 @@ const Home = () => {
 
                             <div className='flex items-center'>
                                 <div className="BUTTON">
-                                    <a href="#" className="px-9 py-5 z-10 bg-white font-bold rounded-md relative 
+                                    <Link to="/ShopNoSidebar" href="#" className="px-9 py-5 z-10 bg-white font-bold rounded-md relative 
                                 before:absolute
                                 before:contetn-['']
                                 before:px-10
@@ -127,7 +152,7 @@ const Home = () => {
                                 before:-z-10
                                 before:hover:scale-110
                                 before:duration-300">
-                                        <i class="ri-shopping-cart-line mr-2"></i> Shop Now</a>
+                                        <i class="ri-shopping-cart-line mr-2"></i>Shop Now</Link>
                                 </div>
 
                                 <div className='flex ml-8'>
@@ -157,8 +182,11 @@ const Home = () => {
                     </div>
                 </section>
 
+                <section className='sticky top-[830px]'>
+                    <a href="#top-scroll" className='absolute right-10'><i class="fa-solid fa-arrow-up bg-[#3577F0] p-4 rounded-md text-white"></i></a>
+                </section>
 
-                <section className='CATEGORIES container mx-auto'>
+                <section className='CATEGORIES container mx-auto '>
                     <div className=' mb-[200px]'>
                         <div className='flex mb-3'>
                             <i className="ri-price-tag-3-line h-6 w-6 text-base border bg-[#FF497C] text-white rounded-full flex items-center justify-center"></i>
@@ -168,60 +196,89 @@ const Home = () => {
                             <h1 className="font-bold text-4xl text-[#292930] mb-[30px]">Browse by Category</h1>
                             <div className='text-gray-400'>
                                 <div className='hover:scale-110 duration-300 inline-block'>
-                                    <a href="#" className=''><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></a>
+                                    <button onClick={handlePrev} href="" className=''><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></button>
                                 </div>
                                 <div className='hover:scale-110 duration-300 inline-block '>
-                                    <a href="#" className=''><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></a>
+                                    <button onClick={handleNext} href="" className=''><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></button>
                                 </div>
                             </div>
                         </div>
 
-
-                        <div className="grid grid-cols-7 gap-x-10 mt-10">
-
-                            <div className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500">
-                                <div className="flex justify-center">
-                                    <img className="mb-3" src="./src/assets/Home/asset 15.png" alt="" />
+                        <div className='mt-10'>
+                            <Slider ref={(c) => (slider = c)} {...settings}>
+                                <div href='#top-scroll' className=" border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer ">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 15.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Phones</p>
                                 </div>
-                                <p className='text-gray-800'>Phones</p>
-                            </div>
-                            <div className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500">
-                                <div className="flex justify-center">
-                                    <img className="mb-3" src="./src/assets/Home/asset 16.png" alt="" />
-                                </div>
-                                <p className='text-gray-800'>Computers</p>
-                            </div>
-                            <div className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500">
-                                <div className="flex justify-center">
-                                    <img className="mb-3" src="./src/assets/Home/asset 17.png" alt="" />
-                                </div>
-                                <p className='text-gray-800'>Accessories</p>
-                            </div>
-                            <div className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500">
-                                <div className="flex justify-center">
-                                    <img className="mb-3" src="./src/assets/Home/asset 18.png" alt="" />
-                                </div>
-                                <p className='text-gray-800'>Laptops</p>
-                            </div>
-                            <div className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500">
-                                <div className="flex justify-center">
-                                    <img className="mb-3" src="./src/assets/Home/asset 19.png" alt="" />
-                                </div>
-                                <p className='text-gray-800'>Monitors</p>
-                            </div>
-                            <div className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500">
-                                <div className="flex justify-center">
-                                    <img className="mb-3" src="./src/assets/Home/asset 10.png" alt="" />
-                                </div>
-                                <p className='text-gray-800'>Networking</p>
-                            </div>
-                            <div className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500">
-                                <div className="flex justify-center">
-                                    <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
-                                </div>
-                                <p className='text-gray-800'>PC Gaming</p>
-                            </div>
-
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 16.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Computers</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 17.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Accessories</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 18.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Laptops</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 19.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Monitors</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 10.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Networking</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>PC Gaming</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 12.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Smartwatches</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 13.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Headphones</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 14.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Camera & Photo</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Video Games</p>
+                                </a>
+                                <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                    <div className="flex justify-center">
+                                        <img className="mb-3" src="./src/assets/Home/asset 12.png" alt="" />
+                                    </div>
+                                    <p className='text-gray-800'>Sports</p>
+                                </a>
+                            </Slider>
                         </div>
                     </div>
                 </section>
@@ -263,7 +320,7 @@ const Home = () => {
                             </div>
 
                             <div className='relative group z-10 '>
-                                <a href='#' className='absolute px-9 py-4 text-white font-bold rounded-md bg-[#3577F0]  
+                                <a href='#top-scroll' className='absolute px-9 py-4 text-white font-bold rounded-md bg-[#3577F0]  
                                 before:content-[""]
                                 before:w-[162px]
                                 before:[50px]
@@ -284,80 +341,16 @@ const Home = () => {
                     </div>
                 </section>
 
+                <section className='JSONDATA Double-slide'>
+                    <DoubleSlide/>
+                </section>
 
                 <section className='FEED-BACK'>
-                    <div className='bg-[#F9F3F0] py-24 '>
-                        <div className='container mx-auto'>
-                            <div className="flex justify-between ">
-                                <div className='mb-10'>
-                                    <p className="text-[#FF497C] font-medium mb-2"><i class="ri-double-quotes-l bg-[#FF497C] p-1 text-white rounded-full text-center mr-3"></i>Testimonials</p>
-                                    <h1 className="font-bold text-4xl text-[#292930]  tracking-wide">Users Feedback</h1>
-                                </div>
-                                <div className='text-gray-400'>
-                                    <div className='hover:scale-110 duration-300 inline-block'>
-                                        <a href="#" className=''><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></a>
-                                    </div>
-                                    <div className='hover:scale-110 duration-300 inline-block '>
-                                        <a href="#" className=''><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                    <FeedBack/>
+                </section>
 
-                            <div className='grid grid-cols-3 gap-10'>
-                                <div>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative shadow-lg'>
-                                        <p>“ It’s amazing how much easier it has been to
-                                            meet new people and create instantly non
-                                            connections. I have the exact same personal
-                                            the only thing that has changed is my mind
-                                            set and a few behaviors. “</p>
-                                        <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
-                                    </div>
-                                    <div className='flex items-center mt-10'>
-                                        <img src="./src/assets/home/asset 31.png" alt="" />
-                                        <div className='ml-5'>
-                                            <h1 className='text-gray-500'>Head Of Idea</h1>
-                                            <h1 className='font-semibold text-lg text-[#292930] tracking-wide'>James C. Anderson</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='mt-10'>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative shadow-lg'>
-                                        <p>“ It’s amazing how much easier it has been to
-                                            meet new people and create instantly non
-                                            connections. I have the exact same personal
-                                            the only thing that has changed is my mind
-                                            set and a few behaviors. “</p>
-                                        <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
-                                    </div>
-                                    <div className='flex items-center mt-10'>
-                                        <img src="./src/assets/home/asset 29.png" alt="" />
-                                        <div className='ml-5'>
-                                            <h1 className='text-gray-500'>Head Of Idea</h1>
-                                            <h1 className='font-semibold text-lg text-[#292930] tracking-wider'>James C. Anderson</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className='bg-white p-12 text-gray-500 leading-7 rounded-lg relative shadow-lg'>
-                                        <p>“ It’s amazing how much easier it has been to
-                                            meet new people and create instantly non
-                                            connections. I have the exact same personal
-                                            the only thing that has changed is my mind
-                                            set and a few behaviors. “</p>
-                                        <div className='absolute -bottom-[30px] left-[100px] border-t-[25px] border-t-transparent border-l-[75px] border-l-white border-b-[50px] border-b-transparent'></div>
-                                    </div>
-                                    <div className='flex items-center mt-10'>
-                                        <img src="./src/assets/home/asset 30.png" alt="" />
-                                        <div className='ml-5'>
-                                            <h1 className='text-gray-500'>Head Of Idea</h1>
-                                            <h1 className='font-semibold text-lg text-[#292930] tracking-wider'>James C. Anderson</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <section className='JSONDATA Single slide my-[100px]'>
+                    <HomeSlideProduct/>
                 </section>
 
                 <section className='TRADE-STORE container mx-auto'>
@@ -374,7 +367,7 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" />
+                                        <Link to="/ProductV1"><img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -389,7 +382,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Media Remote</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Media Remote</Link>
                                         <p className='text-xl font-bold'>$29.99 <span className='text-gray-300 ml-2'><del>$49.99</del></span></p>
                                     </div>
                                 </div>
@@ -402,7 +395,8 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" />
+                                        <Link to="/ProductV1">
+                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -417,7 +411,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>50+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>HD Camera</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>HD Camera</Link>
                                         <p className='text-xl font-bold'>$49.99 </p>
                                     </div>
                                 </div>
@@ -430,7 +424,8 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 34.png" alt="" />
+                                        <Link to="/ProductV1">
+                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 34.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -445,7 +440,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>120+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Gaming Controller</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Gaming Controller</Link>
                                         <p className='text-xl font-bold'>$50.00 </p>
                                     </div>
                                 </div>
@@ -458,7 +453,8 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 35.png" alt="" />
+                                        <Link to="/ProductV1">
+                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 35.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -473,7 +469,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>30+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wall Mountr</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wall Mountr</Link>
                                         <p className='text-xl font-bold'>$19.00 </p>
                                     </div>
                                 </div>
@@ -486,7 +482,8 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 36.png" alt="" />
+                                        <Link to="/ProductV1">
+                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 36.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -501,7 +498,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>700+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Lenevo Laptop</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Lenevo Laptop</Link>
                                         <p className='text-xl font-bold'>$999.99 </p>
                                     </div>
                                 </div>
@@ -514,7 +511,8 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 37.png" alt="" />
+                                        <Link to="/ProductV1">
+                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 37.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -529,7 +527,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>300+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Juice Grinder Machine</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Juice Grinder Machine</Link>
                                         <p className='text-xl font-bold'>$99.00 </p>
                                     </div>
                                 </div>
@@ -542,7 +540,8 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 38.png" alt="" />
+                                        <Link to="/ProductV1">
+                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 38.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -557,7 +556,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wireless Headphone</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Wireless Headphone</Link>
                                         <p className='text-xl font-bold'>$59.99 </p>
                                     </div>
                                 </div>
@@ -570,7 +569,8 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 39.png" alt="" />
+                                        <Link to="/ProductV1">
+                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 39.png" alt="" /></Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -585,7 +585,7 @@ const Home = () => {
                                                 <h1 className='text-xs font-bold ml-2'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
                                             </div>
                                         </div>
-                                        <h1 className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Asus Zenbook Laptop</h1>
+                                        <Link to="/ProductV1" className='text-gray-500 font-semibold mb-2 hover:text-[#3577F0] duration-700'>Asus Zenbook Laptop</Link>
                                         <p className='text-xl font-bold'>$899.00 </p>
                                     </div>
                                 </div>
@@ -617,4 +617,3 @@ const Home = () => {
 }
 
 export default Home
-

@@ -74,7 +74,7 @@ const Footer = () => {
                             <li className='mt-4'><Link to="/SignUp" className='link hover:text-gray-800 duration-500 ' href="#">Login / Register</Link></li>
                             <li className='mt-4'><Link to="/Cart" className='link hover:text-gray-800 duration-500 ' href="#">Cart</Link></li>
                             <li className='mt-4'><Link to="/Wishlist" className='link hover:text-gray-800 duration-500 ' href="#">Wishlist</Link></li>
-                            <li className='mt-4'><Link to="/ShopWithSidebar" className='link hover:text-gray-800 duration-500 ' href="#">Shop</Link></li>
+                            <li className='mt-4'><Link to="/ShopNoSidebar" className='link hover:text-gray-800 duration-500 ' href="#">Shop</Link></li>
                         </ul>
                     </div>
 
@@ -82,8 +82,8 @@ const Footer = () => {
                         <b className='text-gray-800'>Quick Link</b>
                         <ul className='list-item text-gray-500 font-medium mt-6'>
                             <li className='mt-4'><Link to="/PrivacyPolicy" className='link hover:text-gray-800 duration-500 ' href="#">Privacy Policy</Link></li>
-                            <li className='mt-4'><Link to="/TermsOfUse" className='link hover:text-gray-800 duration-500 ' href="#">Terms Of Use</Link></li>
-                            <li className='mt-4'><Link to="/TermsOfUse" className='link hover:text-gray-800 duration-500 ' href="#">FAQ</Link></li>
+                            <li className='mt-4'><Link to="/Termsofuse" className='link hover:text-gray-800 duration-500 ' href="#">Terms Of Use</Link></li>
+                            <li className='mt-4'><Link to="/Termsofuse  " className='link hover:text-gray-800 duration-500 ' href="#">FAQ</Link></li>
                             <li className='mt-4'><Link to="/Contact" className='link hover:text-gray-800 duration-500 ' href="#">Contact</Link></li>
                             <li className='mt-4'><Link to="/Contact" className='link hover:text-gray-800 duration-500 ' href="#">Contact</Link></li>
                         </ul>
@@ -94,12 +94,13 @@ const Footer = () => {
                         <h1 className='mt-6'>Save $3 With App & New User only</h1>
 
                         <div className='flex items-center mt-5'>
-                            <div>
+                            <a href='#top-scroll'>
                                 <img src="./src/assets/home/asset 51.png" alt="" />
-                            </div>
+                            </a>
                             <div className='ml-5'>
-                                <a href="#top-scroll"><img className='mb-4' src="./src/assets/home/asset 52.png" alt="" /></a>
-                                <a href="#top-scroll"><img src="./src/assets/home/asset 53.png" alt="" /></a>
+                                <a href="#top-scroll">
+                                    <img className='mb-4' src="./src/assets/home/asset 52.png" alt="" />
+                                    <img src="./src/assets/home/asset 53.png" alt="" /></a>
                             </div>
                         </div>
                     </div>

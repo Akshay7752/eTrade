@@ -1,34 +1,31 @@
 import React from 'react'
-import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
-import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
-import Speaker from '../../Components/Speaker'
-import Footer from '../../Components/Footer/Footer'
+import { AllTopBar } from './AllDropdown/AllDropdownHover'
+import { AllNavBar, NavBottom } from './AllNavbar/AllNavBar'
+import Speaker from './Speaker'
+import Footer from './Footer/Footer'
 
-const TermsOfUse = () => {
+const Termsofuse = () => {
     return (
-        <div>
+        <>
             <div>
-                <section className='PAGES-DROPDOWN'>
+                <section className='Terms-DROPDOWN'>
                     <AllTopBar />
                 </section>
 
-                <section className='PAGES-NAVBAR sticky top-0 z-20 '>
+                <section className='Terms-NAVBAR sticky top-0 z-20 '>
                     <AllNavBar />
                 </section>
 
-                <section className='PAGES-NAV-BOTTOM'>
+                <section className='Terms-NAV-BOTTOM'>
                     <NavBottom />
                 </section>
 
-                <section className='PAGES-SPEAKER'>
+                <section className='Terms-SPEAKER'>
                     <Speaker p1="Pages" p2="Terms Of Use" />
                 </section>
 
-                <section className='POLICY container mx-auto'>
+                <section className='TERMSOFUSE container mx-auto'>
                     <div className='mr-64'>
-                        {/* <div className='mt-[80px]  text-[22px] font-semibold text-[#27272E] '>
-                            <h1 className='underline underline-offset-[20px] decoration-[3px] decoration-[#3577F0]'>This Privacy policy was published on February 26th, 2022.</h1>
-                        </div> */}
 
                         <div className='mt-[80px]'>
                             <h1 className='text-2xl font-semibold text-[#27272E] mb-[20px]'>GDPR compliance</h1>
@@ -102,13 +99,13 @@ const TermsOfUse = () => {
                     </div>
                 </section>
 
-                <section className='PAGES-FOOTER'>
+                <section className='Terms-FOOTER'>
                     <Footer />
                 </section>
 
             </div>
-        </div>
+        </>
     )
 }
 
-export default TermsOfUse
+export default Termsofuse

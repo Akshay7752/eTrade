@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Gaming remote",
+        "newprice": "$30",
+        "oldprice": "$30",
+        "image": "./src/assets/shop/shopnosidebar/asset 3.png"
+    },
+    {
+        "id": 2,
+        "name": "Keyboard Lighting",
+        "newprice": "$40",
+        "oldprice": "$50",
+        "image": "./src/assets/shop/shopnosidebar/asset 4.png"
+    },
+    {
+        "id": 3,
+        "name": "HD camera",
+        "newprice": "$45",
+        "oldprice": "$60",
+        "image": "./src/assets/shop/shopnosidebar/asset 5.png"
+    },
+    {
+        "id": 4,
+        "name": "Home Theater",
+        "newprice": "$50",
+        "oldprice": "$60",
+        "image": "./src/assets/shop/shopnosidebar/asset 6.png"
+    },
+    {
+        "id": 5,
+        "name": "Blutooth Speake",
+        "newprice": "$38",
+        "oldprice": "$50",
+        "image": "./src/assets/shop/shopnosidebar/asset 7.png"
+    },
+    {
+        "id": 6,
+        "name": "Mouse",
+        "newprice": "$25",
+        "oldprice": "$40",
+        "image": "./src/assets/shop/shopnosidebar/asset 8.png"
+    },
+    {
+        "id": 7,
+        "name": "Headphone",
+        "newprice": "$15",
+        "oldprice": "$20",
+        "image": "./src/assets/shop/shopnosidebar/asset 9.png"
+    },
+    {
+        "id": 8,
+        "name": "3D Gaming remote",
+        "newprice": "$60",
+        "oldprice": "$80",
+        "image": "./src/assets/shop/shopnosidebar/asset 10.png"
+    },
+    {
+        "id": 9,
+        "name": "Jacket",
+        "newprice": "$40",
+        "oldprice": "$50",
+        "image": "./src/assets/shop/shopnosidebar/asset 11.png"
+    },
+    {
+        "id": 10,
+        "name": "Lipstick",
+        "newprice": "$60",
+        "oldprice": "$80",
+        "image": "./src/assets/shop/shopnosidebar/asset 12.png"
+    },
+    {
+        "id": 11,
+        "name": "Perfume",
+        "newprice": "$60",
+        "oldprice": "$80",
+        "image": "./src/assets/shop/shopnosidebar/asset 13.png"
+    },
+    {
+        "id": 12,
+        "name": "Lipstick Kit",
+        "newprice": "$60",
+        "oldprice": "$80",
+        "image": "./src/assets/shop/shopnosidebar/asset 14.png"
+    }
+]

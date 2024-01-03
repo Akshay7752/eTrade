@@ -6,9 +6,11 @@ const ResetPassword = () => {
         <>
             <div className='photo-section '>
                 <div className=' flex items-center justify-between  px-[100px] py-[40px] '>
-                    <img src="../src/assets/pages/sign up/asset 0.png" alt="" />
+                    <Link to="/">
+                        <img src="../src/assets/pages/sign up/asset 0.png" alt="" />
+                    </Link>
                     <span className='w-72 '>
-                        <i class="ri-arrow-left-s-line border p-3 text-lg rounded-md hover:bg-[#3577F0] hover:text-white hover:duration-300 hover:border-none"></i>
+                        <Link to="/ForgotPassword" class="ri-arrow-left-s-line border p-3 text-lg rounded-md hover:bg-[#3577F0] hover:text-white hover:duration-300 hover:border-none"></Link>
                     </span>
                     <div className='flex items-center text-[#292930] font-medium text-sm'>
                         <p>Already a member?</p>
@@ -29,7 +31,7 @@ const ResetPassword = () => {
             <div className='ml-[50%] mt-24 pl-5'>
                 <form>
                     <h1 className='text-[#292930] font-semibold text-3xl'>Reset Password</h1>
-                   
+
                     <div className='relative text-gray-500  mt-5'>
                         <label className='absolute -top-3 left-7 bg-white px-2 font-semibold text-sm'>New Password</label>
                         <input type="password" placeholder='*********' className='border border-gray-300 w-[400px] px-9 py-5 rounded-md font-normal focus:outline-blue-400' />

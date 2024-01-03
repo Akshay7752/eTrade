@@ -38,11 +38,15 @@ const Wishlist = () => {
 
                             <div>
                                 <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
-                                    <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
-                                    <img className="h-20 w-20 -mx-32 cursor-pointer" src="./src/assets/pages/wishlist/asset 2.png"></img>
-                                    <p className="text-xl w-56 font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer duration-300">
+                                    <div className='flex items-center '>
+                                        <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
+                                        <Link to="/ProductV1">
+                                            <img className="h-20 w-20 ml-20 cursor-pointer" src="./src/assets/pages/wishlist/asset 2.png"></img>
+                                        </Link>
+                                    </div>
+                                    <Link to="/ProductV1" className="text-xl  font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer -ml-32 duration-300">
                                         Wireless PS Handler
-                                    </p>
+                                    </Link>
                                     <p className="mr-16 text-gray-500 font-semibold text-xl">$124.00</p>
                                     <p className="mr-16 text-xl text-gray-500 font-semibold">
                                         In Stock
@@ -52,12 +56,16 @@ const Wishlist = () => {
                                     </Link>
                                 </div>
                                 <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
-                                    <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
-                                    <img className="h-20 w-20 -mx-32 cursor-pointer" src="./src/assets/pages/wishlist/asset 3.png"></img>
-                                    <p className="text-xl w-56 font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer duration-300">
+                                    <div className='flex items-center '>
+                                        <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
+                                        <Link to="/ProductV2">
+                                            <img className="h-20 w-20 ml-20 cursor-pointer" src="./src/assets/pages/wishlist/asset 3.png"></img>
+                                        </Link>
+                                    </div>
+                                    <Link to="/ProductV2" className="text-xl  font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer -ml-32 duration-300">
                                         Gradient Light Keyboard
-                                    </p>
-                                    <p className="mr-16 text-gray-500 font-semibold text-xl">$124.00</p>
+                                    </Link>
+                                    <p className="mr-16 -ml-10 text-gray-500 font-semibold text-xl">$124.00</p>
                                     <p className="mr-16 text-xl text-gray-500 font-semibold">
                                         In Stock
                                     </p>
@@ -66,12 +74,16 @@ const Wishlist = () => {
                                     </Link>
                                 </div>
                                 <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
-                                    <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
-                                    <img className="h-20 w-20 -mx-32 cursor-pointer" src="./src/assets/pages/wishlist/asset 4.png"></img>
-                                    <p className="text-xl w-56 font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer duration-300">
+                                    <div className='flex items-center '>
+                                        <i class="fa-solid fa-xmark text-xs w-8 h-8 rounded-full bg-[#F6F7FB] text-center leading-7 ml-4 cursor-pointer hover:border-[#3577F0] hover:ring-2 duration-300 "></i>
+                                        <Link to="/ProductV3">
+                                            <img className="h-20 w-20 ml-20 cursor-pointer" src="./src/assets/pages/wishlist/asset 4.png"></img>
+                                        </Link>
+                                    </div>
+                                    <Link to="/ProductV3" className="text-xl  font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer -ml-32 duration-300">
                                         HD CC Camera
-                                    </p>
-                                    <p className="mr-16  text-gray-500 font-semibold text-xl">$124.00</p>
+                                    </Link>
+                                    <p className="mr-16 ml-12 text-gray-500 font-semibold text-xl">$124.00</p>
                                     <p className="mr-16 text-xl text-gray-500 font-semibold">
                                         In Stock
                                     </p>

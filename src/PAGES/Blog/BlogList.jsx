@@ -11,7 +11,7 @@ const BlogList = () => {
     return (
         <>
             <div>
-                <section className='BLOG-DROPDOWN' id='top-scroll'>
+                <section className='BLOG-DROPDOWN'>
                     <AllTopBar />
                 </section>
 
@@ -34,12 +34,12 @@ const BlogList = () => {
                             <div className='BOX-1 border-b border-gray-100 pb-16'>
                                 <div className=' bg-[#F9F3F0] p-12 pb-16 rounded-md border-l-[6px] border-[#FAB8C4] pr-24 '>
                                     <div className='mb-7'>
-                                        <h1 className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Dubai’s Offers its Take Nike SB Dunk.</h1>
+                                        <Link to="/StandardPost" className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Dubai’s Offers its Take Nike SB Dunk.</Link>
                                     </div>
                                     <div className='flex items-center mb-7'>
                                         <img className='w-12 mr-5' src="../src/assets/blog/blog-list/asset 3.png" alt="" />
                                         <div>
-                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Ralph Edwards</h1>
+                                            <a href="#top-scroll"><h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Ralph Edwards</h1></a>
                                             <h1 className='text-sm text-gray-500'>Mar 27, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 9 min to read</h1>
                                         </div>
                                     </div>
@@ -69,12 +69,12 @@ const BlogList = () => {
 
                                 <div>
                                     <div className='mb-7'>
-                                        <h1 className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 tracking-wide inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan <br /> Brand</h1>
+                                        <Link to="/StandardPost" className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 tracking-wide inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan <br /> Brand</Link>
                                     </div>
                                     <div className='flex items-center mb-7'>
                                         <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/blog-list/asset 5.png" alt="" />
                                         <div>
-                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                            <a href="#top-scroll"> <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1></a>
                                             <h1 className='text-sm text-gray-500'>Mar 25, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                         </div>
                                     </div>
@@ -100,7 +100,7 @@ const BlogList = () => {
                             <div className='BOX-3 border-b border-gray-100 py-16'>
                                 <div className=' bg-[#F9F3F0] p-12 pb-16 rounded-md border-l-[6px] border-[#FAB8C4] '>
                                     <div className='mb-7'>
-                                        <h1 className='text-[#292930] text-[42px] leading-snug italic font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>“An oral history of the AIM away message (by the people who were there)”</h1>
+                                        <Link to="/StandardPost" className='text-[#292930] text-[42px] leading-snug italic font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>“An oral history of the AIM away message (by the people who were there)”</Link>
                                     </div>
                                     <div className='flex items-center'>
                                         <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/blog-list/asset 5.png" alt="" />
@@ -122,18 +122,20 @@ const BlogList = () => {
 
                                 <div>
                                     <div className='mb-7'>
-                                        <h1 className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 tracking-wide inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan <br /> Brand</h1>
+                                        <Link to="/VideoPost" className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 tracking-wide inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan <br /> Brand</Link>
                                     </div>
                                     <div className='flex items-center mb-7'>
                                         <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/blog-list/asset 5.png" alt="" />
                                         <div>
-                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                            <a href="#top-scroll">
+                                                <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                            </a>
                                             <h1 className='text-sm text-gray-500'>Mar 20, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                         </div>
                                     </div>
                                     <p className='text-base text-gray-500 leading-7'>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
                                     <div className='mt-14'>
-                                        <Link to="/StandardPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
+                                        <Link to="/VideoPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
                                             before:absolute 
                                             before:content-[''] 
                                             before:rounded-md 
@@ -153,28 +155,30 @@ const BlogList = () => {
                             <div className='BOX-5 pt-16'>
                                 <div className='mb-10'>
                                     <div className='relative group'>
-                                        <a href="#"><img className='rounded-lg w-full cursor-auto' src="../src/assets/blog/blog-list/asset 7.png" alt="" /></a>
+                                        <Link to="/GallaryPost" href=""><img className='rounded-lg w-full cursor-auto' src="../src/assets/blog/blog-list/asset 7.png" alt="" /></Link>
                                         <div className='absolute top-[50%] w-[100%]'>
-                                            <a href="#" className='left-btn absolute left-10 group-hover:left-2 duration-300 hover:scale-110'><i class="ri-arrow-left-line  bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></a>
-                                            <a href="#" className='right-btn absolute right-10 group-hover:right-2 duration-300 hover:scale-110'><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></a>
+                                            <a href="" className='left-btn absolute left-10 group-hover:left-2 duration-300 hover:scale-110'><i class="ri-arrow-left-line  bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></a>
+                                            <a href="" className='right-btn absolute right-10 group-hover:right-2 duration-300 hover:scale-110'><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></a>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div>
                                     <div className='mb-7'>
-                                        <h1 className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 tracking-wide inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan <br /> Brand</h1>
+                                        <Link to="/GallaryPost" className='text-[#292930] text-2xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 tracking-wide inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan <br /> Brand</Link>
                                     </div>
                                     <div className='flex items-center mb-7'>
                                         <img className='bg-cover w-12 mr-5 ' src="../src/assets/blog/blog-list/asset 8.png" alt="" />
                                         <div>
-                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Leslie Alexander</h1>
+                                            <a href="#top-scroll">
+                                                <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Leslie Alexander</h1>
+                                            </a>
                                             <h1 className='text-sm text-gray-500'>Mar 15, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                         </div>
                                     </div>
                                     <p className='text-base text-gray-500 leading-7'>The Converse x AMBUSH® CTAS Duck Boot and Chuck 70 Fuzzy release November 21 in Greater China. A global release follows <br /> November 24.</p>
                                     <div className='mt-14'>
-                                        <Link to="/StandardPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
+                                        <Link to="/GallaryPost" href="#" className=" relative px-10 py-5 z-10 rounded-md font-semibold  text-white bg-[#3577F0] 
                                             before:absolute 
                                             before:content-[''] 
                                             before:rounded-md 
@@ -194,26 +198,26 @@ const BlogList = () => {
                             <div className="BUTTON-PART">
                                 <div className="mt-20">
                                     <ul className="flex">
-                                        <a href="#top-scroll">
+                                        <a href="#">
                                             <li className="border px-4 py-2 mr-2 rounded-lg bg-[#3577F0] text-white text-lg">1</li>
                                         </a>
-                                        <a href="#top-scroll">
+                                        <a href="#">
                                             <li className="border px-4 py-2 mr-2 rounded-lg hover:text-white hover:bg-[#3577F0] duration-300 text-lg">2</li>
                                         </a>
-                                        <a href="#top-scroll">
+                                        <a href="#">
                                             <li className="border px-4 py-2 mr-2 rounded-lg hover:text-white hover:bg-[#3577F0] duration-300 text-lg">3</li>
                                         </a>
-                                        <a href="#top-scroll">
+                                        <a href="#">
                                             <li className="border px-4 py-2 mr-2 rounded-lg hover:text-white hover:bg-[#3577F0] duration-300 text-lg">4</li>
                                         </a>
-                                        <a href="#top-scroll">
+                                        <a href="#">
                                             <li className="border px-4 py-2 mr-2 rounded-lg hover:text-white hover:bg-[#3577F0] duration-300 text-lg">5</li>
                                         </a>
-                                        <a href="#top-scroll">
+                                        <a href="#">
                                             <li className="border px-4 py-2 mr-2 rounded-lg text-gray-600 hover:text-white hover:bg-[#3577F0] duration-300 text-md">
                                                 <i class="fa-solid fa-arrow-right"></i>
                                             </li>
-                                        </a>                                
+                                        </a>
                                     </ul>
                                 </div>
                             </div>
@@ -225,29 +229,29 @@ const BlogList = () => {
                             <div className='BOX-1 border p-8 rounded-md'>
                                 <h1 className='text-[#292930] text-xl font-medium mb-8'>Latest Posts</h1>
                                 <div className='flex  border-b border-gray-100 pb-5'>
-                                    <Link to="/StandardPost" className='rounded-lg overflow-hidden'>
+                                    <div className='rounded-lg overflow-hidden'>
                                         <img className='bg-cover rounded-lg h-20 w-[170px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 9.png" alt="" />
-                                    </Link>
+                                    </div>
                                     <div className='ml-10'>
-                                        <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Dubai’s FRAME Offers its Take on the</Link>
+                                        <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Dubai’s FRAME Offers its Take on the</a>
                                         <h1 className='text-sm text-gray-500 mt-3'>Mar 27, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
                                     </div>
                                 </div>
                                 <div className='flex  border-b border-gray-100 py-5'>
-                                    <Link to="/StandardPost" className='rounded-lg overflow-hidden'>
+                                    <div className='rounded-lg overflow-hidden'>
                                         <img className='bg-cover rounded-lg h-20 w-[188px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 10.png" alt="" />
-                                    </Link>
+                                    </div>
                                     <div className='ml-10'>
-                                        <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Apple presents App Best of 2020 winners</Link>
+                                        <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Apple presents App Best of 2020 winners</a>
                                         <h1 className='text-sm text-gray-500 mt-3'>Mar 20, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
                                     </div>
                                 </div>
                                 <div className='flex pt-5'>
-                                    <Link to="/StandardPost" className='rounded-lg overflow-hidden'>
+                                    <div className='rounded-lg overflow-hidden'>
                                         <img className='bg-cover rounded-lg h-20 w-[200px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 11.png" alt="" />
-                                    </Link>
+                                    </div>
                                     <div className='ml-10'>
-                                        <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Gallaudet University innovation in education</Link>
+                                        <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Gallaudet University innovation in education</a>
                                         <h1 className='text-sm text-gray-500 mt-3'>Mar 15, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
                                     </div>
                                 </div>

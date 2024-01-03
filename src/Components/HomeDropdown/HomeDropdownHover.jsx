@@ -1,9 +1,7 @@
 import React from 'react'
 import '../HomeDropdown/HomeDropdownstyle.css'
 import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
+
 
 // first-button :-
 export const HomeDropdownHover1 = () => {
@@ -68,7 +66,7 @@ export const HomeDropdownHover2 = () => {
 // Rightpart :-
 export const HomeRightpart = () => {
   return (
-    <div className='right-part z-[60]'>
+    <div className='right-part z-10'>
       <div className='list-none flex text-sm text-gray-700 '>
         <li className='hover:text-blue-500 cursor-pointer ml-6 text-gray-500'>Help</li>
         <Link to="/SignUp" className='hover:text-blue-500 cursor-pointer ml-6 text-gray-500'>Join Us</Link>

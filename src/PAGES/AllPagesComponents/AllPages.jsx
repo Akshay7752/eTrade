@@ -32,79 +32,76 @@ import BlogList from '../Blog/BlogList'
 import Contact from '../Contact/Contact'
 import BlogGrid from '../Blog/BlogGrid'
 import StandardPost from '../Blog/StandardPost'
-import GalleryPost from '../Blog/GallaryPost'
+import GallaryPost from '../Blog/GallaryPost'
 import VideoPost from '../Blog/VideoPost'
 import AudioPost from '../Blog/AudioPost'
 import QuotePost from '../Blog/QuotePost'
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import TermsOfUse from '../Pages/TermsOfUse'
-import SideCart from '../../Components/SideCart'
-import ScrollToTop from '../ScrollToTop'
-
-
+import Termsofuse from '../../Components/Termsofuse'
+import ScrollToTop from '../../Components/ScrollToTop'
 
 
 
 export default function AllPages() {
   return (
     <>
-    <div className='select-none'>
+      <div>
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
 
-      {/* HOME-SECTION-COMPONENTS */}
-      <BrowserRouter>
-      <ScrollToTop/>
-        <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/*' element={<Error404 />}></Route>
+            {/* HOME-SECTION-COMPONENTS */}
+            <Route path='/' element={<Home />}></Route>
 
-          {/* SHOP-SECTION-COMPONENTS  */}
-          <Route path='/ShopWithSidebar' element={<ShopWithSidebar />}></Route>
-          <Route path='/ShopNoSidebar' element={<ShopNoSidebar />}></Route>
-          <Route path='/ProductV1' element={<ProductV1 />}></Route>
-          <Route path='/ProductV2' element={<ProductV2 />}></Route>
-          <Route path='/ProductV3' element={<ProductV3 />}></Route>
-          <Route path='/ProductV4' element={<ProductV4 />}></Route>
-          <Route path='/ProductV5' element={<ProductV5 />}></Route>
-          <Route path='/ProductV6' element={<ProductV6 />}></Route>
-          <Route path='/ProductV7' element={<ProductV7 />}></Route>
+            {/* SHOP-SECTION-COMPONENTS  */}
+            <Route path='/ShopWithSidebar' element={<ShopWithSidebar />}></Route>
+            <Route path='/ShopNoSidebar' element={<ShopNoSidebar />}></Route>
+            <Route path='/ProductV1' element={<ProductV1 />}></Route>
+            <Route path='/ProductV2' element={<ProductV2 />}></Route>
+            <Route path='/ProductV3' element={<ProductV3 />}></Route>
+            <Route path='/ProductV4' element={<ProductV4 />}></Route>
+            <Route path='/ProductV5' element={<ProductV5 />}></Route>
+            <Route path='/ProductV6' element={<ProductV6 />}></Route>
+            <Route path='/ProductV7' element={<ProductV7 />}></Route>
 
-          {/* PAGES-SECTION-COMPONENTS  */}
-          <Route path='/Wishlist' element={<Wishlist />}></Route>
-          <Route path='/Cart' element={<Cart />}></Route>
-          <Route path='/Checkout' element={<Checkout />}></Route>
-          <Route path='/Account' element={<Account />}></Route>
-          <Route path='/SignUp' element={<SignUp />}></Route>
-          <Route path='/SignIn' element={<SignIn />}></Route>
-          <Route path='/ForgotPassword' element={<ForgotPassword />}></Route>
-          <Route path='/ResetPassword' element={<ResetPassword />}></Route>
-          <Route path='/PrivacyPolicy' element={<PrivacyPolicy />}></Route>
-          <Route path='/ComingSoon' element={<ComingSoon />}></Route>
-          <Route path='/Error404' element={<Error404 />}></Route>
-          <Route path='/Typography' element={<Typography />}></Route>
+            {/* PAGES-SECTION-COMPONENTS  */}
+            <Route path='/Wishlist' element={<Wishlist />}></Route>
+            <Route path='/Cart' element={<Cart />}></Route>
+            <Route path='/Checkout' element={<Checkout />}></Route>
+            <Route path='/Account' element={<Account />}></Route>
+            <Route path='/SignUp' element={<SignUp />}></Route>
+            <Route path='/SignIn' element={<SignIn />}></Route>
+            <Route path='/ForgotPassword' element={<ForgotPassword />}></Route>
+            <Route path='/ResetPassword' element={<ResetPassword />}></Route>
+            <Route path='/PrivacyPolicy' element={<PrivacyPolicy />}></Route>
+            <Route path='/ComingSoon' element={<ComingSoon />}></Route>
+            <Route path='/Error404' element={<Error404 />}></Route>
+            <Route path='/Typography' element={<Typography />}></Route>
 
-          {/* ABOUT-SECTION-COMPONENT  */}
-          <Route path='/About' element={<About />}></Route>
+            {/* ABOUT-SECTION-COMPONENT  */}
+            <Route path='/About' element={<About />}></Route>
 
-          {/* BLOG-SECTION-CPMPONENTS  */}
-          <Route path='/BlogList' element={<BlogList />}></Route>
-          <Route path='/BlogGrid' element={<BlogGrid />}></Route>
-          <Route path='/StandardPost' element={<StandardPost />}></Route>
-          <Route path='/GalleryPost' element={<GalleryPost />}></Route>
-          <Route path='/VideoPost' element={<VideoPost />}></Route>
-          <Route path='/AudioPost' element={<AudioPost />}></Route>
-          <Route path='/QuotePost' element={<QuotePost />}></Route>
+            {/* BLOG-SECTION-COMPONENTS  */}
+            <Route path='/BlogList' element={<BlogList />}></Route>
+            <Route path='/BlogGrid' element={<BlogGrid />}></Route>
+            <Route path='/StandardPost' element={<StandardPost />}></Route>
+            <Route path='/GallaryPost' element={<GallaryPost />}></Route>
+            <Route path='/VideoPost' element={<VideoPost />}></Route>
+            <Route path='/AudioPost' element={<AudioPost />}></Route>
+            <Route path='/QuotePost' element={<QuotePost />}></Route>
 
-          {/* CONTACT-SECTION-COMPONENT  */}
-          <Route path='/Contact' element={<Contact />}></Route>
+            {/* CONTACT-SECTION-COMPONENT  */}
+            <Route path='/Contact' element={<Contact />}></Route>
 
+            {/* universal page  */}
+            <Route path='/*' element={<Error404 />}></Route>
 
-          {/* TERMS-OF-USE */}
-          <Route path='/TermsOfUse' element={<TermsOfUse />}></Route>
-          {/* <Route path='/SideCart' element={<SideCart />}></Route> */}
-          
+            {/* Termsofuse  */}
+            <Route path='/Termsofuse' element={<Termsofuse />}></Route>
 
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
 
       </div>
 

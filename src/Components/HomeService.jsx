@@ -3,7 +3,7 @@ import React from 'react'
 const HomeService = () => {
     return (
         <>
-            <div className="pb-[50px] mt-20 text-[#292930] container mx-auto">
+            <div className=" my-20 text-[#292930] container mx-auto">
                 <div className="text-center">
                     <p className="text-[#FF497C] font-medium"><i class="ri-thumb-up-line bg-[#FF497C] p-1 text-white rounded-full text-center mr-3"></i>Why Us</p>
                     <h1 className="font-bold text-4xl text-[#292930] mb-[30px]">Why People Choose Us</h1>

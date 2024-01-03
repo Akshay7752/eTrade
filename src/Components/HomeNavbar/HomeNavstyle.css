@@ -13,7 +13,7 @@
     position: absolute;
     width: 15rem;
     z-index: 100;
-    top: 90px;
+    top: 190px;
 }
 
 .home-content ul li {
@@ -24,7 +24,7 @@
 }
 
 .home-dropdown:hover button {
-    color: black
+    color: black;   
 }
 
 .home-dropdown:hover .home-content {
@@ -87,3 +87,36 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* icon-menu open and hide  */
+.details-menu {
+    display: none;
+  }
+  
+  .details-menu.open {
+    display: block;
+  }
+
+  /* icon-sidebar home open and hide  */
+  .sidebar {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 100;
+  }
+  .sidebar.open {
+    width: 600px;
+  }
+  
+ /* search icon open and hide  */
+  .popup {
+    display: none;
+    position: fixed;
+  }
+  .popup.open {
+    display: block;
+  }

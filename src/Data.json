@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Gaming remote",
+        "newprice": "$30",
+        "oldprice": "$30",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-01.png",
+        "offer":"10%OFF"
+    },
+    {
+        "id": 2,
+        "name": "Keyboard Lighting",
+        "newprice": "$40",
+        "oldprice": "$50",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-02.png"
+    },
+    {
+        "id": 3,
+        "name": "HD camera",
+        "newprice": "$45",
+        "oldprice": "$60",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-03.png",
+        "offer":"25%OFF"
+    },
+    {
+        "id": 4,
+        "name": "Home Theater",
+        "newprice": "$70",
+        "oldprice": "$100",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-04.png"
+    },
+    {
+        "id": 5,
+        "name": "Blutooth Speake",
+        "newprice": "$38",
+        "oldprice": "$50",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-05.png",
+        "offer":"10%OFF"
+    },
+    {
+        "id": 6,
+        "name": "Mouse",
+        "newprice": "$25",
+        "oldprice": "$40",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-06.png"
+    },
+    {
+        "id": 7,
+        "name": "Headphone",
+        "newprice": "$15",
+        "oldprice": "$20",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-07.png",
+        "offer":"5%OFF"
+    },
+    {
+        "id": 8,
+        "name": "3D Gaming remote",
+        "newprice": "$60",
+        "oldprice": "$80",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/electric/product-08.png"
+    },
+    {
+        "id": 9,
+        "name": "Jacket",
+        "newprice": "$30",
+        "oldprice": "$30",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-9.png",
+        "offer":"12%OFF"
+    },
+    {
+        "id": 10,
+        "name": "Lipstick",
+        "newprice": "$40",
+        "oldprice": "$50",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-10.png"
+    },
+    {
+        "id": 11,
+        "name": "Perfume",
+        "newprice": "$45",
+        "oldprice": "$60",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-11.png"
+    },
+    {
+        "id": 12,
+        "name": "Lipstick Kit",
+        "newprice": "$70",
+        "oldprice": "$100",
+        "image": "https://new.axilthemes.com/demo/template/etrade/assets/images/product/fashion/product-12.png",
+        "offer":"22%OFF"
+    }
+]

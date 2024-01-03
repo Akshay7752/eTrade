@@ -28,23 +28,23 @@ const AudioPost = () => {
 
                     <div className='grid grid-cols-10 gap-8 mt-[100px]'>
 
-                    <div className='NAV-ICON col-span-1 pr-10 h-60 sticky top-28'>
+                        <div className='NAV-ICON col-span-1 pr-10 h-60 sticky top-28'>
                             <h1 className='text-gray-500 text-lg  text-center'>Share on:</h1>
                             <div className='text-center'>
-                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-facebook-fill text-xl"></i></a></li>
+                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500 '>
+                                    <li className='nav-icon flex justify-center items-center '><a href="#top-scroll"><i class="ri-facebook-fill text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-instagram-line text-xl"></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-instagram-line text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-twitter-fill text-xl "></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-twitter-fill text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-linkedin-fill text-xl "></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-linkedin-fill text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-discord-line text-xl "></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-discord-line text-xl "></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,7 +55,9 @@ const AudioPost = () => {
                                 <div className='flex items-center mb-7 border-b py-10'>
                                     <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/audio-post/asset 3.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Mar 25, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>
@@ -76,7 +78,9 @@ const AudioPost = () => {
                                     <div className='flex items-center'>
                                         <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/audio-post/asset 3.png" alt="" />
                                         <div>
-                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                            <a href="#top-scroll">
+                                                <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                            </a>
                                             <h1 className='text-sm text-gray-500'>Mar 25, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                         </div>
                                     </div>
@@ -99,24 +103,30 @@ const AudioPost = () => {
                                         <div className='flex'>
                                             <img className='w-16 h-16' src="./src/assets/blog/audio-post/asset 6.png" alt="" />
                                             <div className='ml-5'>
-                                                <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Cameron Williamson</h1>
-                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'>Reply</span></h1>
+                                                <a href="#top-scroll">
+                                                    <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Cameron Williamson</h1>
+                                                </a>
+                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'><a href="#top-scroll">Reply</a></span></h1>
                                                 <p className='text-gray-500 mb-10'>Duis hendrerit velit scelerisque felis tempus, id porta libero venenatis. Nulla facilisi. Phasellus viverra magna commodo dui lacinia tempus. Donec malesuada nunc non dui posuere, fringilla vestibulum urna mollis. Integer condimentum ac sapien quis maximus.</p>
                                             </div>
                                         </div>
                                         <div className='flex ml-20'>
                                             <img className='w-16 h-16' src="./src/assets/blog/audio-post/asset 6.png" alt="" />
                                             <div className='ml-5'>
-                                                <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Annie Mario</h1>
-                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'>Reply</span></h1>
+                                                <a href="#top-scroll">
+                                                    <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Annie Mario</h1>
+                                                </a>
+                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'><a href="#top-scroll">Reply</a></span></h1>
                                                 <p className='text-gray-500 mb-10'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse lobortis cursus lacinia. Vestibulum vitae leo id diam pellentesque ornare.</p>
                                             </div>
                                         </div>
                                         <div className='flex'>
                                             <img className='w-16 h-16' src="./src/assets/blog/audio-post/asset 7.png" alt="" />
                                             <div className='ml-5'>
-                                                <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Thopmson Arnold</h1>
-                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'>Reply</span></h1>
+                                                <a href="#top-scroll">
+                                                    <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Thopmson Arnold</h1>
+                                                </a>
+                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'><a href="#top-scroll">Reply</a></span></h1>
                                                 <p className='text-gray-500 mb-10'>Duis hendrerit velit scelerisque felis tempus, id porta libero venenatis. Nulla facilisi. Phasellus viverra magna commodo dui lacinia tempus. Donec malesuada nunc non dui posuere, fringilla vestibulum urna mollis. Integer condimentum ac sapien quis maximus.</p>
                                             </div>
                                         </div>
@@ -167,60 +177,72 @@ const AudioPost = () => {
                                 <div className='BOX-1 border p-8 rounded-md'>
                                     <h1 className='text-[#292930] text-xl font-medium mb-8'>Latest Posts</h1>
                                     <div className='flex  border-b border-gray-100 pb-5'>
-                                    <Link to="/StandardPost" className='rounded-lg overflow-hidden'>
-                                        <img className='bg-cover rounded-lg h-20 w-[170px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 9.png" alt="" />
-                                    </Link>
-                                    <div className='ml-10'>
-                                        <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Dubai’s FRAME Offers its Take on the</Link>
-                                        <h1 className='text-sm text-gray-500 mt-3'>Mar 27, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
+                                        <div className='rounded-lg overflow-hidden'>
+                                            <Link to="/StandardPost">
+                                                <img className='bg-cover rounded-lg h-20 w-[170px] hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 8.png" alt="" />
+                                            </Link>
+                                        </div>
+                                        <div className='ml-10'>
+                                            <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Dubai’s FRAME Offers its Take on the</Link>
+                                            <h1 className='text-sm text-gray-500 mt-3'>Mar 27, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='flex  border-b border-gray-100 py-5'>
-                                    <Link to="/StandardPost" className='rounded-lg overflow-hidden'>
-                                        <img className='bg-cover rounded-lg h-20 w-[188px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 10.png" alt="" />
-                                    </Link>
-                                    <div className='ml-10'>
-                                        <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Apple presents App Best of 2020 winners</Link>
-                                        <h1 className='text-sm text-gray-500 mt-3'>Mar 20, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
+                                    <div className='flex  border-b border-gray-100 py-5'>
+                                        <div className='rounded-lg overflow-hidden'>
+                                            <Link to="/StandardPost">
+                                                <img className='bg-cover rounded-lg h-20 w-[188px] hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 9.png" alt="" />
+                                            </Link>
+                                        </div>
+                                        <div className='ml-10'>
+                                            <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Apple presents App Best of 2020 winners</Link>
+                                            <h1 className='text-sm text-gray-500 mt-3'>Mar 20, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className='flex pt-5'>
-                                    <Link to="/StandardPost" className='rounded-lg overflow-hidden'>
-                                        <img className='bg-cover rounded-lg h-20 w-[200px] hover:scale-110 duration-500 cursor-pointer' src="../src/assets/blog/blog-list/asset 11.png" alt="" />
-                                    </Link>
-                                    <div className='ml-10'>
-                                        <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Gallaudet University innovation in education</Link>
-                                        <h1 className='text-sm text-gray-500 mt-3'>Mar 15, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
+                                    <div className='flex pt-5'>
+                                        <div className='rounded-lg overflow-hidden'>
+                                            <Link to="/StandardPost">
+                                                <img className='bg-cover rounded-lg h-20 w-[200px] hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 10.png" alt="" />
+                                            </Link>
+                                        </div>
+                                        <div className='ml-10'>
+                                            <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Gallaudet University innovation in education</Link>
+                                            <h1 className='text-sm text-gray-500 mt-3'>Mar 15, 2022 <span className=' border-r-2 border-gray-300 mx-4'></span>300k Views</h1>
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
 
                                 <div className='BOX-2 border p-8 rounded-md mt-14'>
                                     <h1 className='text-[#292930] text-xl font-medium mb-8'>Recent Viewed Products</h1>
                                     <div className='flex border-b border-gray-100 pb-5 '>
                                         <div className='rounded-lg overflow-hidden'>
-                                            <img className='bg-cover rounded-lg  hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 11.jpeg" alt="" />
+                                            <Link to="/StandardPost">
+                                                <img className='bg-cover rounded-lg  hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 11.jpeg" alt="" />
+                                            </Link>
                                         </div>
                                         <div className='ml-10 mt-3'>
-                                            <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Men's Fashion Tshirt</a>
+                                            <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Men's Fashion Tshirt</Link>
                                             <h1 className='text-lg font-semibold text-gray-300 mt-3'>$30 <span className='text-gray-700 ml-3'>$20</span></h1>
                                         </div>
                                     </div>
                                     <div className='flex border-b border-gray-100 py-5 '>
                                         <div className='rounded-lg overflow-hidden'>
-                                            <img className='bg-cover rounded-lg  hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 12.jpeg" alt="" />
+                                            <Link to="/StandardPost">
+                                                <img className='bg-cover rounded-lg  hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 12.jpeg" alt="" />
+                                            </Link>
                                         </div>
                                         <div className='ml-10 mt-3'>
-                                            <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Nike Shoes</a>
+                                            <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Nike Shoes</Link>
                                             <h1 className='text-lg font-semibold text-gray-300 mt-3'>$200 <span className='text-gray-700 ml-3'>$150</span></h1>
                                         </div>
                                     </div>
                                     <div className='flex pt-5 '>
                                         <div className='rounded-lg overflow-hidden'>
-                                            <img className='bg-cover rounded-lg  hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 13.jpeg" alt="" />
+                                            <Link to="/StandardPost">
+                                                <img className='bg-cover rounded-lg  hover:scale-110 duration-500 cursor-pointer' src="./src/assets/blog/audio-post/asset 13.jpeg" alt="" />
+                                            </Link>
                                         </div>
                                         <div className='ml-10 mt-3'>
-                                            <a className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Addidas Shoes</a>
+                                            <Link to="/StandardPost" className='text-[#292930] text-lg font-medium hover:text-[#3577F0] cursor-pointer duration-300 leading-3' href="">Addidas Shoes</Link>
                                             <h1 className='text-lg font-semibold text-gray-300 mt-3'>$300 <span className='text-gray-700 ml-3'>$200</span></h1>
                                         </div>
                                     </div>
@@ -308,39 +330,51 @@ const AudioPost = () => {
                         <div className='grid grid-cols-3 gap-10'>
                             <div>
                                 <Link to="/StandardPost">
-                                    <img className='w-full rounded-lg mb-10' src="./src/assets/blog/gallery-post/asset 19.png" alt="" />
+                                    <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 18.png" alt="" />
                                 </Link>
-                                <Link to="/StandardPost"><a className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</a></Link>
+                                <Link to="/StandardPost">
+                                    <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</h1>
+                                </Link>
                                 <div className='flex items-center mb-7  py-10'>
-                                    <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/gallery-post/asset 4.png" alt="" />
+                                    <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/video-post/asset 3.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Leslie Alexander</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Leslie Alexander</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Fab 17, 2019 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <Link to="/StandardPost">
-                                    <img className='w-full rounded-lg mb-10' src="./src/assets/blog/gallery-post/asset 15.png" alt="" />
+                                    <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 14.png" alt="" />
                                 </Link>
-                                <Link to="/StandardPost" className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</Link>
+                                <Link to="/StandardPost">
+                                    <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</h1>
+                                </Link>
                                 <div className='flex items-center mb-7  py-10'>
-                                    <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/gallery-post/asset 16.png" alt="" />
+                                    <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/video-post/asset 15.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Julian Vinn</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Julian Vinn</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Mar 28, 2020 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <Link>
-                                    <img className='w-full rounded-lg mb-10' src="./src/assets/blog/gallery-post/asset 17.png" alt="" />
+                                <Link to="/StandardPost">
+                                    <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 16.png" alt="" />
                                 </Link>
-                                <Link className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</Link>
+                                <Link to="/StandardPost">
+                                    <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</h1>
+                                </Link>
                                 <div className='flex items-center mb-7  py-10'>
-                                    <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/gallery-post/asset 18.png" alt="" />
+                                    <img className='bg-cover w-12 mr-5 rounded-full' src="./src/assets/blog/video-post/asset 17.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Ariana Grande</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Ariana Grande</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Apr 20, 2021 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>

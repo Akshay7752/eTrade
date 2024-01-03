@@ -1,12 +1,31 @@
-import React from 'react'
-
+import React, { useReducer } from 'react'
 import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
 import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import ShopJsonSlide from './ShopJsonSlide'
+import Slider from 'react-slick'
 
 const ProductV4 = () => {
+    
+
+    const initialState = {
+        firstCounter: 1,
+    }
+    const reducer = (state, action) => {
+        switch (action.type) {
+
+            case 'inc1':
+                return { ...state, firstCounter: state.firstCounter + action.value }
+            case 'dec1':
+                return { ...state, firstCounter: state.firstCounter - action.value }
+
+            default:
+                return state;
+        }
+    }
+    const [count, dispatch] = useReducer(reducer, initialState);
     return (
         <>
             <div>
@@ -22,7 +41,7 @@ const ProductV4 = () => {
                     <NavBottom />
                 </section>
 
-                <section className='IMAGES-AND-DISCRIPTION bg-[#F9F3F0] mb-[100px]'>
+                <section className='IMAGES-AND-DISCRIPTION bg-[#F9F3F0] '>
                     <div className='container mx-auto'>
                         <div className='grid grid-cols-2 gap-10 py-[80px] '>
                             <div className='main-div-photos'>
@@ -89,11 +108,21 @@ const ProductV4 = () => {
                                         </ul>
                                     </div>
                                     <div className='flex justify-between items-center'>
-                                        <div className='flex items-center'>
-                                            <span className='bg-gray-100 py-[4px] px-[12px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>-</span>
-                                            <h1 className='font-semibold text-lg mx-5'>1</h1>
-                                            <span className='bg-gray-100 py-[4px] px-[10px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>+</span>
-                                        </div>
+                                    <div className='flex items-center '>
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
+                                            if (count.firstCounter > 0) {
+                                                dispatch({ type: 'dec1', value: 1 });
+                                            }
+                                        }}>
+                                            <i class="fa-solid fa-minus text-xs"></i>
+                                        </button>
+
+                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.firstCounter}</h1>
+
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc1', value: 1 })}>
+                                            <i class="fa-solid fa-plus text-xs"></i>
+                                        </button>
+                                    </div>
                                         <div className='flex items-center'>
                                             <div className='mx-5'>
                                                 <Link to="/Cart" href="#" className='relative z-10 font-bold bg-[#3577F0] text-white px-32 py-5 rounded-md 
@@ -170,9 +199,12 @@ const ProductV4 = () => {
 
                                 </div>
                             </div>
-
                         </div>
                     </div>
+                </section>
+
+                <section className='JSONDATA'>
+                    <ShopJsonSlide/>
                 </section>
 
                 <section className='SHOP-FOOTER'>

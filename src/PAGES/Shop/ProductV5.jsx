@@ -5,6 +5,7 @@ import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import ShopJsonSlide from './ShopJsonSlide'
 
 const ProductV5 = () => {
     return (
@@ -22,7 +23,7 @@ const ProductV5 = () => {
                     <NavBottom />
                 </section>
 
-                <section className='IMAGES-AND-DISCRIPTION mb-[100px]'>
+                <section className='IMAGES-AND-DISCRIPTION '>
                     <div className='container mx-auto'>
                         <div className='grid grid-cols-2 gap-10 py-[80px]'>
                             <div className='main-div-photos '>
@@ -323,6 +324,10 @@ const ProductV5 = () => {
                             </div>
                         </div>
                     </div>
+                </section>
+
+                <section className='JSONDATA'>
+                    <ShopJsonSlide/>
                 </section>
 
                 <section className='SHOP-FOOTER'>

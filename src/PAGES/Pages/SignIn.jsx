@@ -6,7 +6,9 @@ const SignIn = () => {
         <>
             <div className='photo-section '>
                 <div className=' flex items-center justify-between  px-[100px] py-[40px] '>
-                    <Link to="/"><img src="../src/assets/pages/sign in/asset 0.png" alt="" /></Link>
+                    <Link to="/">
+                        <img src="../src/assets/pages/sign in/asset 0.png" alt="" />
+                    </Link>
                     <div className='flex items-center'>
                         <p className='text-[#292930] text-sm font-medium'>Not a member?</p>
                         <Link to="/SignUp" href="#" className=" relative px-12 py-5  rounded-md font-semibold ml-10 text-white bg-[#ff497c] 
@@ -67,7 +69,7 @@ const SignIn = () => {
                         before:duration-300 ">Sign In</a>
 
                         <Link to="/ForgotPassword" className='text-sm text-[#3577F1] hover:text-gray-500 hover:cursor-pointer'>Forget password?</Link>
-                        
+
                     </div>
                 </form>
             </div>

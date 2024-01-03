@@ -1,12 +1,30 @@
-import React from 'react'
-
+import React, { useReducer } from 'react'
 import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
 import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import ShopJsonSlide from './ShopJsonSlide'
+import { Carousel } from 'bootstrap'
 
 const ProductV2 = () => {
+
+    const initialState = {
+        firstCounter: 1,
+    }
+    const reducer = (state, action) => {
+        switch (action.type) {
+
+            case 'inc1':
+                return { ...state, firstCounter: state.firstCounter + action.value }
+            case 'dec1':
+                return { ...state, firstCounter: state.firstCounter - action.value }
+
+            default:
+                return state;
+        }
+    }
+    const [count, dispatch] = useReducer(reducer, initialState);
     return (
         <>
             <div>
@@ -22,8 +40,9 @@ const ProductV2 = () => {
                     <NavBottom />
                 </section>
 
-                <section className='IMAGES-AND-DISCRIPTION  bg-[#F9F3F0] mb-[100px]'>
+                <section className='IMAGES-AND-DISCRIPTION  bg-[#F9F3F0] '>
                     <div className='grid grid-cols-2 gap-10 py-[80px] container mx-auto'>
+                     
 
                         <div className='main-div-photos flex'>
                             <div>
@@ -37,13 +56,14 @@ const ProductV2 = () => {
                                 <img className='rounded-lg' src="./src/assets/shop/p2/asset 2.png" alt="" />
                                 <h1 className='absolute px-3 py-1 rounded-md bg-[#417EF0] font-bold text-xs text-white top-8 right-7 ' style={{ boxShadow: "0 8px 16px 0 rgba(53,119,240,.3) " }}>20% OFF</h1>
                                 <div className='absolute top-[500px] right-8'>
-                                    <a className='h-12 w-12 flex justify-center items-center bg-white rounded-full hover:bg-[#417EF0]       duration-300 hover:text-white' href="">
+                                    <a className='h-12 w-12 flex justify-center items-center bg-white rounded-full hover:bg-[#417EF0]  duration-300 hover:text-white' href="">
                                         <i class="fa-solid fa-magnifying-glass-plus"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div className='main-div-details '>
+                  
+                        <div className='main-div-details'>
                             <h1 className='font-bold text-4xl text-[#292930] tracking-wide mb-8'>Ella Everyday Tote</h1>
                             <h1 className='font-semibold text-2xl text-[#292930] mb-5'>$155.00 - $255.00</h1>
                             <div className='flex border-b-2 border-gray-200'>
@@ -82,10 +102,20 @@ const ProductV2 = () => {
                                     </ul>
                                 </div>
                                 <div className='flex justify-between items-center'>
-                                    <div className='flex items-center'>
-                                        <span className='bg-gray-100 py-[4px] px-[12px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>-</span>
-                                        <h1 className='font-semibold text-lg mx-5'>1</h1>
-                                        <span className='bg-gray-100 py-[4px] px-[10px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>+</span>
+                                    <div className='flex items-center '>
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
+                                            if (count.firstCounter > 0) {
+                                                dispatch({ type: 'dec1', value: 1 });
+                                            }
+                                        }}>
+                                            <i class="fa-solid fa-minus text-xs"></i>
+                                        </button>
+
+                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.firstCounter}</h1>
+
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc1', value: 1 })}>
+                                            <i class="fa-solid fa-plus text-xs"></i>
+                                        </button>
                                     </div>
                                     <div className='flex items-center'>
                                         <div className='mx-5'>
@@ -115,7 +145,7 @@ const ProductV2 = () => {
                                                 before:bg-[#3577F0]
                                                 before:scale-0 
                                                 before:-z-10
-                                                before:hover:scale-105
+                                                   before:hover:scale-105
                                                 before:duration-300
                                                 before:top-0
                                                 before:bottom-0
@@ -163,8 +193,11 @@ const ProductV2 = () => {
 
                             </div>
                         </div>
-
                     </div>
+                </section>
+
+                <section className='JSONDATA'>
+                    <ShopJsonSlide />
                 </section>
 
                 <section className='SHOP-FOOTER'>

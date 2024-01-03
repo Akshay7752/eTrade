@@ -1,13 +1,30 @@
-import React from 'react'
-
+import React, { useReducer } from 'react'
 import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
 import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
-
+import ShopJsonSlide from './ShopJsonSlide'
 
 const ProductV1 = () => {
+
+    const initialState = {
+        firstCounter: 1,
+    }
+    const reducer = (state, action) => {
+        switch (action.type) {
+
+            case 'inc1':
+                return { ...state, firstCounter: state.firstCounter + action.value }
+            case 'dec1':
+                return { ...state, firstCounter: state.firstCounter - action.value }
+
+            default:
+                return state;
+        }
+    }
+    const [count, dispatch] = useReducer(reducer, initialState);
+
     return (
         <>
             <div>
@@ -38,7 +55,7 @@ const ProductV1 = () => {
                             <img className='rounded-md bg-cover' src="./src/assets/shop/p1/asset 9.png" alt="" />
                             <img className='rounded-md bg-cover' src="./src/assets/shop/p1/asset 10.png" alt="" />
                         </div>
-                        <div className='main-div-details h-[1140px] sticky top-28'>
+                        <div className='main-div-details h-[1140px] sticky top-28 '>
                             <h1 className='font-bold text-4xl text-[#292930] tracking-wide mb-8'>Ella Everyday Tote</h1>
                             <h1 className='font-semibold text-2xl text-[#292930] mb-5'>$155.00 - $255.00</h1>
                             <div className='flex border-b-2 border-gray-200'>
@@ -77,10 +94,20 @@ const ProductV1 = () => {
                                     </ul>
                                 </div>
                                 <div className='flex justify-between items-center'>
-                                    <div className='flex items-center'>
-                                        <span className='bg-gray-100 py-[4px] px-[12px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>-</span>
-                                        <h1 className='font-semibold text-lg mx-5'>1</h1>
-                                        <span className='bg-gray-100 py-[4px] px-[10px] rounded-full hover:ring-[#3577F0]  hover:ring-2 duration-300 cursor-pointer'>+</span>
+                                    <div className='flex items-center '>
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
+                                            if (count.firstCounter > 0) {
+                                                dispatch({ type: 'dec1', value: 1 });
+                                            }
+                                        }}>
+                                            <i class="fa-solid fa-minus text-xs"></i>
+                                        </button>
+
+                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.firstCounter}</h1>
+
+                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc1', value: 1 })}>
+                                            <i class="fa-solid fa-plus text-xs"></i>
+                                        </button>
                                     </div>
                                     <div className='flex items-center'>
                                         <div className='mx-5'>
@@ -110,7 +137,7 @@ const ProductV1 = () => {
                                                 before:bg-[#3577F0]
                                                 before:scale-0 
                                                 before:-z-10
-                                                before:hover:scale-105
+                                                   before:hover:scale-105
                                                 before:duration-300
                                                 before:top-0
                                                 before:bottom-0
@@ -160,6 +187,10 @@ const ProductV1 = () => {
                         </div>
 
                     </div>
+                </section>
+
+                <section className='JSONDATA'>
+                    <ShopJsonSlide/>
                 </section>
 
                 <section className='SHOP-FOOTER'>

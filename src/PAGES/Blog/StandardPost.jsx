@@ -3,8 +3,26 @@ import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
 import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
+import { Link } from 'react-router-dom'
+import Slide from 'react-slick'
 
-const  StandardPost = () => {
+const StandardPost = () => {
+    const settings = {
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        speed: 500,
+    };
+
+    let slider;
+
+    const handlePrev = () => {
+        slider.slickPrev();
+    };
+
+    const handleNext = () => {
+        slider.slickNext();
+    };
     return (
         <>
             <div>
@@ -30,20 +48,20 @@ const  StandardPost = () => {
                         <div className='NAV-ICON col-span-1 pr-10 h-60 sticky top-28'>
                             <h1 className='text-gray-500 text-lg  text-center'>Share on:</h1>
                             <div className='text-center'>
-                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-facebook-fill text-xl"></i></a></li>
+                                <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500 '>
+                                    <li className='nav-icon flex justify-center items-center '><a href="#top-scroll"><i class="ri-facebook-fill text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-instagram-line text-xl"></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-instagram-line text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-twitter-fill text-xl "></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-twitter-fill text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-linkedin-fill text-xl "></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-linkedin-fill text-xl "></i></a></li>
                                 </ul>
                                 <ul className='btn-hover py-5 hover:text-slate-100 text-gray-500'>
-                                    <li className='nav-icon flex justify-center items-center'><a href="#top"><i class="ri-discord-line text-xl "></i></a></li>
+                                    <li className='nav-icon flex justify-center items-center'> <a href="#top-scroll"><i class="ri-discord-line text-xl "></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -54,7 +72,9 @@ const  StandardPost = () => {
                                 <div className='flex items-center mb-7 border-b py-10'>
                                     <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/standard-post/asset 3.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Mar 25, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>
@@ -70,7 +90,8 @@ const  StandardPost = () => {
                                     <div className='flex items-center'>
                                         <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/standard-post/asset 3.png" alt="" />
                                         <div>
-                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1>
+                                            <a href="#top-scroll">
+                                                <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Theresa Underwood</h1></a>
                                             <h1 className='text-sm text-gray-500'>Mar 25, 2022 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                         </div>
                                     </div>
@@ -93,24 +114,30 @@ const  StandardPost = () => {
                                         <div className='flex'>
                                             <img className='w-16 h-16' src="../src/assets/blog/standard-post/asset 6.png" alt="" />
                                             <div className='ml-5'>
-                                                <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Cameron Williamson</h1>
-                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'>Reply</span></h1>
+                                                <a href="#top-scroll">
+                                                    <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Cameron Williamson</h1>
+                                                </a>
+                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'> <i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'><a href="#top-scroll">Reply</a> </span></h1>
                                                 <p className='text-gray-500 mb-10'>Duis hendrerit velit scelerisque felis tempus, id porta libero venenatis. Nulla facilisi. Phasellus viverra magna commodo dui lacinia tempus. Donec malesuada nunc non dui posuere, fringilla vestibulum urna mollis. Integer condimentum ac sapien quis maximus.</p>
                                             </div>
                                         </div>
                                         <div className='flex ml-20'>
                                             <img className='w-16 h-16' src="../src/assets/blog/standard-post/asset 6.png" alt="" />
                                             <div className='ml-5'>
-                                                <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Annie Mario</h1>
-                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'>Reply</span></h1>
+                                                <a href="#top-scroll">
+                                                    <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Annie Mario</h1>
+                                                </a>
+                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'><a href="#top-scroll">Reply</a></span></h1>
                                                 <p className='text-gray-500 mb-10'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse lobortis cursus lacinia. Vestibulum vitae leo id diam pellentesque ornare.</p>
                                             </div>
                                         </div>
                                         <div className='flex'>
                                             <img className='w-16 h-16' src="../src/assets/blog/standard-post/asset 7.png" alt="" />
                                             <div className='ml-5'>
-                                                <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Thopmson Arnold</h1>
-                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'>Reply</span></h1>
+                                                <a href="#top-scroll">
+                                                    <h1 className='text-[#292930] text-lg font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>Thopmson Arnold</h1>
+                                                </a>
+                                                <h1 className='text-gray-400 my-3'>Nov 23, 2018 at 12:23 pm <span className='text-[4px] align-middle'><i class="fa-solid fa-circle"></i></span><span className='font-semibold text-[#3577F0] ml-2 cursor-pointer'><a href="#top-scroll">Reply</a></span></h1>
                                                 <p className='text-gray-500 mb-10'>Duis hendrerit velit scelerisque felis tempus, id porta libero venenatis. Nulla facilisi. Phasellus viverra magna commodo dui lacinia tempus. Donec malesuada nunc non dui posuere, fringilla vestibulum urna mollis. Integer condimentum ac sapien quis maximus.</p>
                                             </div>
                                         </div>
@@ -134,7 +161,7 @@ const  StandardPost = () => {
                                             <input type="text" className='w-full border border-gray-300  px-10 py-5 rounded-md font-normal outline-none' />
                                         </div>
                                         <div className='mt-5'>
-                                            <a href="#" className=" relative px-12 py-5 rounded-md font-semibold  text-white bg-[#3577F0] 
+                                            <a href="#top-scroll" className=" relative px-12 py-5 rounded-md font-semibold  text-white bg-[#3577F0] 
                                                 before:absolute 
                                                 before:content-[''] 
                                                 before:w-[200px] 
@@ -292,47 +319,68 @@ const  StandardPost = () => {
                             <h1 className="font-bold text-4xl text-[#292930] mb-[30px]">Related Blog</h1>
                             <div className='text-gray-400'>
                                 <div className='hover:scale-110 duration-300 inline-block'>
-                                    <a href="#" className=''><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></a>
+                                    <button onClick={handlePrev} className=''><i class="ri-arrow-left-line mr-2 bg-[#F6F7FB] p-4 rounded-md"></i></button>
                                 </div>
                                 <div className='hover:scale-110 duration-300 inline-block '>
-                                    <a href="#" className=''><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></a>
+                                    <button onClick={handleNext}><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></button>
                                 </div>
                             </div>
                         </div>
+
                         <div className='grid grid-cols-3 gap-10'>
+                        <Slider ref={(c) => (slider = c)} {...settings} >
                             <div>
-                                <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 18.png" alt="" />
-                                <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</h1>
+                                <Link to="/StandardPost">
+                                    <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 18.png" alt="" />
+                                </Link>
+                                <Link to="/StandardPost">
+                                    <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>With an Irreverent Twist, AMBUSH® Highlights Converse's Outdoor Heritage</h1>
+                                </Link>
                                 <div className='flex items-center mb-7  py-10'>
                                     <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/standard-post/asset 3.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Leslie Alexander</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Leslie Alexander</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Fab 17, 2019 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 14.png" alt="" />
-                                <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</h1>
+                                <Link to="/StandardPost">
+                                    <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 14.png" alt="" />
+                                </Link>
+                                <Link to="/StandardPost">
+                                    <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>UCLA Athletics Reaches Multi-Year Agreement with NIKE, Inc. and Jordan Brand</h1>
+                                </Link>
                                 <div className='flex items-center mb-7  py-10'>
                                     <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/standard-post/asset 15.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Julian Vinn</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Julian Vinn</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Mar 28, 2020 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>
                             </div>
                             <div>
-                                <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 16.png" alt="" />
-                                <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</h1>
+                                <Link to="/StandardPost">
+                                    <img className='w-full rounded-lg mb-10' src="../src/assets/blog/standard-post/asset 16.png" alt="" />
+                                </Link>
+                                <Link to="/StandardPost">
+                                    <h1 className='text-[#292930] text-xl font-semibold hover:text-[#3577F0] cursor-pointer duration-300 inline'>An oral history of the AIM away message by the people who were there</h1>
+                                </Link>
                                 <div className='flex items-center mb-7  py-10'>
                                     <img className='bg-cover w-12 mr-5 rounded-full' src="../src/assets/blog/standard-post/asset 17.png" alt="" />
                                     <div>
-                                        <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Ariana Grande</h1>
+                                        <a href="#top-scroll">
+                                            <h1 className='text-[#292930] text-base font-semibold hover:text-[#3577F0] cursor-pointer duration-300 leading-8 inline'>Ariana Grande</h1>
+                                        </a>
                                         <h1 className='text-sm text-gray-500'>Apr 20, 2021 <span className=' border-r-2 border-gray-300 mx-2'></span> 300k Views</h1>
                                     </div>
                                 </div>
                             </div>
+                        </Slider>
                         </div>
                     </div>
                 </section>
