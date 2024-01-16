@@ -7,6 +7,7 @@ import Footer from '../../Components/Footer/Footer'
 import dataJson from '../../Data.json'
 import { Link } from 'react-router-dom'
 import "../Shop/Check.css"
+import Slider from 'react-slider'
 
 const ShopWithSidebar = () => {
     const [isOpen1, setIsOpen1] = useState(true);
@@ -29,6 +30,10 @@ const ShopWithSidebar = () => {
     const toggleAccordion5 = () => {
         setIsOpen5(!isOpen5);
     };
+
+    const MIN = 0;
+    const MAX = 5000;
+    const [value, setValue] = useState([MIN, MAX])
 
     const [selectCateg, setselectCateg] = useState("Sun Care");
     const [selectgender, setselectGender] = useState("Men (40)");
@@ -57,187 +62,191 @@ const ShopWithSidebar = () => {
                         <div>
 
                             <div className="max-w-md mx-auto mb-10">
-                                
-                                    <div onClick={toggleAccordion1}>
-                                        <div className='w-full'>
-                                            <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
-                                                <h1 className='text-lg text-gray-700 font-semibold'>CATEGORIES</h1>
-                                                <div className='flex items-end justify-between'>
-                                                    {isOpen1 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
-                                                </div>
+
+                                <div onClick={toggleAccordion1}>
+                                    <div className='w-full'>
+                                        <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
+                                            <h1 className='text-lg text-gray-700 font-semibold'>CATEGORIES</h1>
+                                            <div className='flex items-end justify-between'>
+                                                {isOpen1 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {
-                                        isOpen1 && <div className='text-gray-500 leading-10 ml-1'>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Sun Care"} onChange={() => setselectCateg("Sun Care")} />
-                                                <label className='ml-3' for="checkbox">Sun Care</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Night Care"} onChange={() => setselectCateg("Night Care")} />
-                                                <label className='ml-3' for="checkbox">Night Care</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Treatments"} onChange={() => setselectCateg("Treatments")} />
-                                                <label className='ml-3' for="checkbox">Treatments</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Moisturizers"} onChange={() => setselectCateg("Moisturizers")} />
-                                                <label className='ml-3' for="checkbox">Moisturizers</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Eye Care"} onChange={() => setselectCateg("Eye Care")} />
-                                                <label className='ml-3' for="checkbox">Eye Care</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Masks"} onChange={() => setselectCateg("Masks")} />
-                                                <label className='ml-3' for="checkbox">Masks</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Featured"} onChange={() => setselectCateg("Featured")} />
-                                                <label className='ml-3' for="checkbox">Featured</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "On Sale"} onChange={() => setselectCateg("On Sale")} />
-                                                <label className='ml-3' for="checkbox">On Sale</label>
-                                            </div>
+                                {
+                                    isOpen1 && <div className='text-gray-500 leading-10 ml-1'>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Sun Care"} onChange={() => setselectCateg("Sun Care")} />
+                                            <label className='ml-3' for="checkbox">Sun Care</label>
                                         </div>
-                                    }
-                                
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Night Care"} onChange={() => setselectCateg("Night Care")} />
+                                            <label className='ml-3' for="checkbox">Night Care</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Treatments"} onChange={() => setselectCateg("Treatments")} />
+                                            <label className='ml-3' for="checkbox">Treatments</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Moisturizers"} onChange={() => setselectCateg("Moisturizers")} />
+                                            <label className='ml-3' for="checkbox">Moisturizers</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Eye Care"} onChange={() => setselectCateg("Eye Care")} />
+                                            <label className='ml-3' for="checkbox">Eye Care</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Masks"} onChange={() => setselectCateg("Masks")} />
+                                            <label className='ml-3' for="checkbox">Masks</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "Featured"} onChange={() => setselectCateg("Featured")} />
+                                            <label className='ml-3' for="checkbox">Featured</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectCateg === "On Sale"} onChange={() => setselectCateg("On Sale")} />
+                                            <label className='ml-3' for="checkbox">On Sale</label>
+                                        </div>
+                                    </div>
+                                }
+
                             </div>
 
                             <div className="max-w-md mx-auto mb-10">
-                                
-                                    <div onClick={toggleAccordion2}>
-                                        <div className='w-full'>
-                                            <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
-                                                <h1 className='text-lg text-gray-700 font-semibold'>GENDER  </h1>
-                                                <div className='flex items-end justify-between'>
-                                                    {isOpen2 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
-                                                </div>
+
+                                <div onClick={toggleAccordion2}>
+                                    <div className='w-full'>
+                                        <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
+                                            <h1 className='text-lg text-gray-700 font-semibold'>GENDER  </h1>
+                                            <div className='flex items-end justify-between'>
+                                                {isOpen2 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {
-                                        isOpen2 && <div className='text-gray-500 leading-10 ml-1'>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectgender === "Men (40)"} onChange={() => setselectGender("Men (40)")} />
-                                                <label className='ml-3' for="checkbox">Men (40)</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectgender === "Women (56)"} onChange={() => setselectGender("Women (56)")} />
-                                                <label className='ml-3' for="checkbox">Women (56)</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectgender === "Unisex (18)"} onChange={() => setselectGender("Unisex (18)")} />
-                                                <label className='ml-3' for="checkbox">Unisex (18)</label>
-                                            </div>
+                                {
+                                    isOpen2 && <div className='text-gray-500 leading-10 ml-1'>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectgender === "Men (40)"} onChange={() => setselectGender("Men (40)")} />
+                                            <label className='ml-3' for="checkbox">Men (40)</label>
                                         </div>
-                                    }
-                                
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectgender === "Women (56)"} onChange={() => setselectGender("Women (56)")} />
+                                            <label className='ml-3' for="checkbox">Women (56)</label>
+                                        </div>
+                                        <div>
+                                            <input type="checkbox" class="rounded-checkbox" id="checkbox" checked={selectgender === "Unisex (18)"} onChange={() => setselectGender("Unisex (18)")} />
+                                            <label className='ml-3' for="checkbox">Unisex (18)</label>
+                                        </div>
+                                    </div>
+                                }
+
                             </div>
 
                             <div className="max-w-md mx-auto mb-10">
-                               
-                                    <div onClick={toggleAccordion3}>
-                                        <div className='w-full'>
-                                            <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
-                                                <h1 className='text-lg text-gray-700 font-semibold'>COLORS</h1>
-                                                <div className='flex items-end justify-between'>
-                                                    {isOpen3 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
-                                                </div>
+
+                                <div onClick={toggleAccordion3}>
+                                    <div className='w-full'>
+                                        <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
+                                            <h1 className='text-lg text-gray-700 font-semibold'>COLORS</h1>
+                                            <div className='flex items-end justify-between'>
+                                                {isOpen3 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {
-                                        isOpen3 && <div className='ml-2'>
-                                            <ul className='flex items-center mt-8'>
-                                                <li className='bg-[#906145] h-4 w-4 mr-2 rounded-full outline outline-2 outline-offset-4 outline-[#906145] cursor-pointer'></li>
-                                                <li className='bg-[#FAB8C4] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#FFDC60] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#896BA7] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#DBDEFF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#BADEFF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#DFBF9B] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                            </ul>
-                                            <ul className='flex items-center mt-5'>
-                                                <li className='bg-[#BADEFF] h-4 w-4 mr-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#DBDEFF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#DBF8FF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                                <li className='bg-[#FFEDDC] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
-                                            </ul>
-                                        </div>
+                                {
+                                    isOpen3 && <div className='ml-2'>
+                                        <ul className='flex items-center mt-8'>
+                                            <li className='bg-[#906145] h-4 w-4 mr-2 rounded-full outline outline-2 outline-offset-4 outline-[#906145] cursor-pointer'></li>
+                                            <li className='bg-[#FAB8C4] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#FFDC60] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#896BA7] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#DBDEFF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#BADEFF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#DFBF9B] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                        </ul>
+                                        <ul className='flex items-center mt-5'>
+                                            <li className='bg-[#BADEFF] h-4 w-4 mr-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#DBDEFF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#DBF8FF] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                            <li className='bg-[#FFEDDC] h-4 w-4 mx-2 rounded-full cursor-pointer'></li>
+                                        </ul>
+                                    </div>
 
-                                    }
-                               
+                                }
                             </div>
 
-
                             <div className="max-w-md mx-auto mb-10">
-                               
-                                    <div onClick={toggleAccordion4}>
-                                        <div className='w-full'>
-                                            <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
-                                                <h1 className='text-lg text-gray-700 font-semibold'>SIZE</h1>
-                                                <div className='flex items-end justify-between'>
-                                                    {isOpen4 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
-                                                </div>
+
+                                <div onClick={toggleAccordion4}>
+                                    <div className='w-full'>
+                                        <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
+                                            <h1 className='text-lg text-gray-700 font-semibold'>SIZE</h1>
+                                            <div className='flex items-end justify-between'>
+                                                {isOpen4 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {
-                                        isOpen4 && <div className=''>
-                                            <ul className='flex items-center mb-3'>
-                                                <li className='bg-[#3577F0] text-white rounded-full px-4 py-3 m-1 cursor-pointer'>XS</li>
-                                                <li className='bg-white rounded-full px-5 py-3 text-gray-500 border-2 m-1 cursor-pointer'>S</li>
-                                                <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>M</li>
-                                                <li className='bg-white rounded-full px-5 py-3 text-gray-500 border-2 m-1 cursor-pointer'>L</li>
-                                                <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>XL</li>
-                                            </ul>
-                                            <ul className='flex items-center'>
-                                                <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>XXL</li>
-                                                <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>3XL</li>
-                                                <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>4XL</li>
-                                            </ul>
-                                        </div>
-                                    }
-                                
+                                {
+                                    isOpen4 && <div className=''>
+                                        <ul className='flex items-center mb-3'>
+                                            <li className='bg-[#3577F0] text-white rounded-full px-4 py-3 m-1 cursor-pointer'>XS</li>
+                                            <li className='bg-white rounded-full px-5 py-3 text-gray-500 border-2 m-1 cursor-pointer'>S</li>
+                                            <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>M</li>
+                                            <li className='bg-white rounded-full px-5 py-3 text-gray-500 border-2 m-1 cursor-pointer'>L</li>
+                                            <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>XL</li>
+                                        </ul>
+                                        <ul className='flex items-center'>
+                                            <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>XXL</li>
+                                            <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>3XL</li>
+                                            <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>4XL</li>
+                                        </ul>
+                                    </div>
+                                }
+
                             </div>
 
 
                             <div className="max-w-md mx-auto mb-10">
-                                
-                                    <div onClick={toggleAccordion5}>
-                                        <div className='w-full'>
-                                            <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
-                                                <h1 className='text-lg text-gray-700 font-semibold'>PRICE</h1>
-                                                <div className='flex items-end justify-between'>
-                                                    {isOpen5 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
-                                                </div>
+
+                                <div onClick={toggleAccordion5}>
+                                    <div className='w-full'>
+                                        <div className='flex justify-between border-b-2 border-[#3577F0] pb-3 mb-4 '>
+                                            <h1 className='text-lg text-gray-700 font-semibold'>PRICE</h1>
+                                            <div className='flex items-end justify-between'>
+                                                {isOpen5 ? <span><i class="fa-solid fa-minus"></i></span> : <span><i class="fa-solid fa-plus"></i></span>}
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
-                                    {
-                                        isOpen5 && <div>
-                                            <ul className='flex items-center mb-6'>
-                                                <li className='bg-white rounded-full px-5 py-3 text-gray-500 border-2 border-gray-500 mr-3 cursor-pointer'>30</li>
-                                                <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>5000</li>
-                                            </ul>
-                                            <div>
-                                                <input type="range" className='w-full' min="0" max="75" />
-                                                <h1 className='font-medium text-gray-700 text-base mt-4'>price:$0 <span className='ml-7'>$3000</span></h1>
-                                            </div>
+                                {
+                                    isOpen5 && <div>
+                                        <ul className='flex items-center mb-6'>
+                                            <li className='bg-white rounded-full px-5 py-3 text-gray-500 border-2 border-gray-500 mr-3 cursor-pointer'>30</li>
+                                            <li className='bg-white rounded-full px-4 py-3 text-gray-500 border-2 m-1 cursor-pointer'>5000</li>
+                                        </ul>
+                                        <div className='mt-10'>
+                                            <Slider
+                                                className='horizontal-slider'
+                                                thumbClassName='example-thumb'
+                                                trackClassName='example-track'
+                                                value={value}
+                                                min={MIN}
+                                                max={MAX}
+                                                onChange={setValue}
+                                            />
+                                            <h1 className='font-semibold'>Price: <span >${value[0]}</span> <span className='ml-5'>${value[1]}</span></h1>
                                         </div>
-                                    }
-                                
+                                    </div>
+                                }
                             </div>
-
 
                             <div className='relative text-center w-full py-5 rounded-md text-white font-bold z-10 mt-16'>
                                 <a href="" className='

@@ -40,14 +40,16 @@ import QuotePost from '../Blog/QuotePost'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Termsofuse from '../../Components/Termsofuse'
 import ScrollToTop from '../../Components/ScrollToTop'
+import ScrollIndicator from '../../Components/ScrollIndicator'
 
 
 
 export default function AllPages() {
   return (
     <>
-      <div>
+      <div className='select-none'>
         <BrowserRouter>
+          <ScrollIndicator />
           <ScrollToTop />
           <Routes>
 

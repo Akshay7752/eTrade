@@ -4,14 +4,9 @@ import { Link, NavLink } from 'react-router-dom'
 import IconDropdown2 from './IconDropdown2';
 import IconSidebarAll from './IconSidebarAll';
 import IconSearchAll from './IconSearchAll';
-
+import Slider from "react-slick";
 
 export const AllNavBar = () => {
-
-    const [activeTab, setActiveTab] = useState(1);
-    const handleTabClick = (tabNumber) => {
-        setActiveTab(tabNumber);
-    };
 
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const handleSearchClick = () => {
@@ -44,7 +39,8 @@ export const AllNavBar = () => {
                     {/* navbar list  */}
                     <div className='grid grid-cols-6 gap-x-10'>
                         <div className='home-dropdown'>
-                            <button className='font-semibold underline decoration-[2px] underline-offset-4 h-24 '><span className='text-gray-800 hover:text-black'>Home</span><i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i></button>
+                            <button className='navbar-button font-semibold h-24'>Home</button>
+                            <i class="fa-solid fa-angle-down text-gray-500 transition-all text-xs ml-1"></i>
                             <div className='home-content shadow-md'>
                                 <ul className='list bg-white rounded-md'>
                                     <li><NavLink to="/" className='text-[#ff497c]' href="">Home-Electronics</NavLink></li>
@@ -192,10 +188,10 @@ export const AllNavBar = () => {
                             </div>
                         </div>
 
-                        
+
                         <div className='home-dropdown text-gray-800'>
-                        <button className='navbar-button font-semibold h-24'><Link to="/About">About</Link></button>
-                    </div>
+                            <button className='navbar-button font-semibold h-24'><Link to="/About">About</Link></button>
+                        </div>
 
                         <div className='home-dropdown text-gray-800'>
                             <button className='navbar-button font-semibold h-24'>Blog</button>
@@ -294,16 +290,58 @@ export const AllNavBar = () => {
 
 // get offer 
 export const NavBottom = () => {
+
+    const settings = {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 3000,
+        // cssEase: "linear",
+        arrows: false,
+    };
+    let slider;
+
+    const handlePrev = () => {
+        slider.slickPrev();
+    };
+
+    const handleNext = () => {
+        slider.slickNext();
+    };
     return (
         <>
-            <div className='OFFER relative flex justify-center items-center'>
-                <img className='w-full h-16 object-cover' src="./src/assets/shop/shopwithsidebar/asset 29.png" alt="" />
-                <div className='absolute text-white '>
-                    <i class="ri-arrow-left-line mr-10"></i>
-                    <a className=' font-bold '>STUDENT NOW GET 10% OFF : <span className='underline hover:text-[#FF497C] duration-700'>GET OFFER</span></a>
-                    <i class="ri-arrow-right-line ml-10"></i>
+            <div className='OFFER flex justify-center items-center'>
+                <div>
+                    <img className='w-full h-16 object-cover' src="./src/assets/shop/shopwithsidebar/asset 29.png" alt="" />
+                </div>
+                <div className='absolute text-white  w-[550px] mt-2'>
+                    <div className='flex justify-between '>
+                        <div className='w-10 '>
+                            <button onClick={handlePrev}>
+                                <i class="ri-arrow-left-line "></i>
+                            </button>
+                        </div>
+                        <div className='h-10 w-96'>
+                            <Slider ref={(c) => (slider = c)}  {...settings}>
+                                <div>
+                                    <h1 className=' font-bold '>STUDENT NOW GET 10% OFF : <span className='underline hover:text-[#FF497C] duration-700'>GET OFFER</span></h1>
+                                </div>
+                                <div>
+                                    <h1 className=' font-bold '>STUDENT NOW GET 10% OFF : <span className='underline hover:text-[#FF497C] duration-700'>GET OFFER</span></h1>
+                                </div>
+                            </Slider>
+                        </div>
+                        <div className='w-10 '>
+                            <button onClick={handleNext}>
+                                <i class="ri-arrow-right-line "></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </>
     )
 }

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const FeedBack = () => {
-    let slider;
+    
 
     const settings = {
         speed: 500,
@@ -16,6 +16,7 @@ const FeedBack = () => {
         swipeToSlide: true,
     };
 
+    let slider;
     const handlePrev = () => {
         slider.slickPrev();
     };

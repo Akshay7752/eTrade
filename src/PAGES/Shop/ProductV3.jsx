@@ -5,6 +5,7 @@ import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import ShopJsonSlide from './ShopJsonSlide'
+import P3Slider from './Sliders/P3Slide'
 
 const ProductV3 = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -44,27 +45,13 @@ const ProductV3 = () => {
                 </section>
 
                 <section className='IMAGES-AND-DISCRIPTION '>
-                    <div className='flex py-[80px] container mx-auto'>
+                    <div className='grid grid-cols-2 gap-10 pt-[80px] container mx-auto'>
 
-                        <div className='main-div-photos flex w-[1700px]'>
-                            <div>
-                                <img className='w-[90px] rounded-md mb-7 ring-2 ring-[#417EF0]' src="./src/assets/shop/p3/asset 5.png" alt="" />
-                                <img className='w-[90px] rounded-md mb-7 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p3/asset 3.png" alt="" />
-                                <img className='w-[90px] rounded-md mb-7 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p3/asset 4.png" alt="" />
-                                <img className='w-[90px] rounded-md mb-7 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p3/asset 5.png" alt="" />
-                            </div>
-                            <div className='relative pl-16'>
-                                <img className='rounded-lg w-[800px]' src="./src/assets/shop/p3/asset 2.png" alt="" />
-                                <h1 className='absolute px-3 py-1 rounded-md bg-[#417EF0] font-bold text-xs text-white top-8 right-7 ' style={{ boxShadow: "0 8px 16px 0 rgba(53,119,240,.3) " }}>20% OFF</h1>
-                                <div className='absolute top-[640px] right-9'>
-                                    <a className='h-12 w-12 flex justify-center items-center bg-white rounded-full hover:bg-[#417EF0]       duration-300 hover:text-white' href="">
-                                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
+                        <div>
+                            <P3Slider />
                         </div>
-
-                        <div className='main-div-details ml-9'>
+                        
+                        <div className='main-div-details '>
                             <h1 className='font-bold text-4xl text-[#292930] tracking-wide mb-9'>3D™ wireless headset</h1>
                             <h1 className='font-semibold text-2xl text-[#292930] mb-5'>$155.00 - $255.00</h1>
                             <div className='flex border-b-2 border-gray-200'>
@@ -103,7 +90,7 @@ const ProductV3 = () => {
                                     </ul>
                                 </div>
                                 <div className='flex justify-between items-center'>
-                                <div className='flex items-center '>
+                                    <div className='flex items-center '>
                                         <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
                                             if (count.firstCounter > 0) {
                                                 dispatch({ type: 'dec1', value: 1 });
@@ -397,7 +384,7 @@ const ProductV3 = () => {
                 </section>
 
                 <section className='JSONDATA'>
-                    <ShopJsonSlide/>
+                    <ShopJsonSlide />
                 </section>
 
                 <section className='SHOP-FOOTER'>

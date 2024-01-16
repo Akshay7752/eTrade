@@ -3,11 +3,26 @@ import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
 import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
-import dataJson from '../../Data.json'
 import { Link } from 'react-router-dom'
 import ShopJsonSlide from './ShopJsonSlide'
+import Slider from "react-slick";
+import P6Slider from './Sliders/P6Slider'
 
 const ProductV6 = () => {
+    let slider;
+    const handlePrev = () => {
+        slider.slickPrev();
+    };
+
+    const handleNext = () => {
+        slider.slickNext();
+    };
+    const settings = {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+    };
 
     const [activeTab, setActiveTab] = useState(1);
     const handleTabClick = (tabNumber) => {
@@ -31,31 +46,10 @@ const ProductV6 = () => {
 
                 <section className='IMAGES-AND-DISCRIPTION'>
                     <div className='container mx-auto'>
-                        <div className='grid grid-cols-2 gap-10 py-[80px] '>
-                            <div className='main-div-photos '>
-                                <div className='flex justify-between items-center'>
-                                    <div className='hover:scale-110 duration-300'>
-                                        <a href="#" className='text-gray-500 '><i class="ri-arrow-left-line  bg-[#F6F7FB] p-4 rounded-md"></i></a>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <img className='rounded-lg' src="./src/assets/shop/p6/asset 3.png" alt="" />
-                                        </div>
-                                    </div>
-                                    <div className='hover:scale-110 duration-300'>
-                                        <a href="#" className='text-gray-500'><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className='flex justify-center mt-10'>
-                                        <img className='rounded-full w-14 mx-3 ring-2 ring-[#417EF0]' src="./src/assets/shop/p5/asset 3.png" alt="" />
-                                        <img className='rounded-full w-14 mx-3 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p6/asset 4.png" alt="" />
-                                        <img className='rounded-full w-14 mx-3 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p6/asset 5.png" alt="" />
-                                        <img className='rounded-full w-14 mx-3 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p6/asset 6.png" alt="" />
-                                        <img className='rounded-full w-14 mx-3 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p6/asset 7.png" alt="" />
-                                        <img className='rounded-full w-14 mx-3 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p6/asset 8.png" alt="" />
-                                    </div>
-                                </div>
+                        <div className='grid grid-cols-2 gap-20 pt-[80px] '>
+
+                            <div>
+                                <P6Slider />
                             </div>
 
                             <div className='main-div-details '>
@@ -138,8 +132,8 @@ const ProductV6 = () => {
                             <div className='flex '>
                                 <div className='relative group mr-8 cursor-pointer' >
                                     <ul className=' text-2xl font-semibold'>
-                                        <li onClick={() => handleTabClick(1)} className={`${activeTab === 1 ? 'before:absolute before:content-[""] before:w-[125px] before:h-[2px] before:bg-[#3577F0] before:bottom-0 before:left-0 text-[#3577F0]' 
-                                        : 'before:absolute before:content-[""] before:w-[0] before:h-[2px] before:bg-[#3577F0] before:bottom-0 before:right-0 before:group-hover:w-[123px] before:duration-500 before:group-hover:left-0 text-gray-500 hover:text-[#3577F0] duration-500'}`}>
+                                        <li onClick={() => handleTabClick(1)} className={`${activeTab === 1 ? 'before:absolute before:content-[""] before:w-[125px] before:h-[2px] before:bg-[#3577F0] before:bottom-0 before:left-0 text-[#3577F0]'
+                                            : 'before:absolute before:content-[""] before:w-[0] before:h-[2px] before:bg-[#3577F0] before:bottom-0 before:right-0 before:group-hover:w-[123px] before:duration-500 before:group-hover:left-0 text-gray-500 hover:text-[#3577F0] duration-500'}`}>
                                             <span>Description</span>
                                         </li>
                                     </ul>
@@ -369,7 +363,7 @@ const ProductV6 = () => {
                 </section>
 
                 <section className='JSONDATA'>
-                    <ShopJsonSlide/>
+                    <ShopJsonSlide />
                 </section>
 
                 <section className='SHOP-FOOTER '>

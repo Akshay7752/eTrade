@@ -5,9 +5,27 @@ import Speaker from '../../Components/Speaker'
 import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
+import Slider from "react-slick";
 
 
 const BlogList = () => {
+
+    const settings = {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+    };
+
+    let slider;
+    const handlePrev = () => {
+        slider.slickPrev();
+    };
+
+    const handleNext = () => {
+        slider.slickNext();
+    };
     return (
         <>
             <div>
@@ -155,10 +173,17 @@ const BlogList = () => {
                             <div className='BOX-5 pt-16'>
                                 <div className='mb-10'>
                                     <div className='relative group'>
-                                        <Link to="/GallaryPost" href=""><img className='rounded-lg w-full cursor-auto' src="../src/assets/blog/blog-list/asset 7.png" alt="" /></Link>
+                                        <Slider ref={(c) => (slider = c)} {...settings} >
+                                            <div>
+                                                <img className='rounded-lg w-full cursor-auto' src="../src/assets/blog/blog-list/asset 7.png" alt="" />
+                                            </div>
+                                            <div>
+                                                <img className='rounded-lg w-full cursor-auto' src="../src/assets/blog/blog-list/asset 6.png" alt="" />
+                                            </div>
+                                        </Slider>
                                         <div className='absolute top-[50%] w-[100%]'>
-                                            <a href="" className='left-btn absolute left-10 group-hover:left-2 duration-300 hover:scale-110'><i class="ri-arrow-left-line  bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></a>
-                                            <a href="" className='right-btn absolute right-10 group-hover:right-2 duration-300 hover:scale-110'><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></a>
+                                            <button onClick={handlePrev} href="" className='left-btn absolute left-10 group-hover:left-5 duration-300 hover:scale-110'><i class="ri-arrow-left-line  bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></button>
+                                            <button onClick={handleNext} href="" className='right-btn absolute right-10 group-hover:right-5 duration-300 hover:scale-110'><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md text-gray-400"></i></button>
                                         </div>
                                     </div>
                                 </div>

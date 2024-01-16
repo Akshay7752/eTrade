@@ -5,10 +5,11 @@ import SubscribePhoto from '../../Components/SubscribePhoto'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import ShopJsonSlide from './ShopJsonSlide'
-import { Carousel } from 'bootstrap'
+import P2Slider from './Sliders/P2Slide'
+
 
 const ProductV2 = () => {
-
+    
     const initialState = {
         firstCounter: 1,
     }
@@ -41,28 +42,12 @@ const ProductV2 = () => {
                 </section>
 
                 <section className='IMAGES-AND-DISCRIPTION  bg-[#F9F3F0] '>
-                    <div className='grid grid-cols-2 gap-10 py-[80px] container mx-auto'>
-                     
+                    <div className='grid grid-cols-2 gap-10 pt-[80px] container mx-auto'>
 
-                        <div className='main-div-photos flex'>
-                            <div>
-                                <img className='rounded-full mb-5 ring-2 ring-[#417EF0]' src="./src/assets/shop/p2/asset 7.png" alt="" />
-                                <img className='rounded-full my-5 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p2/asset 8.png" alt="" />
-                                <img className='rounded-full my-5 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p2/asset 9.png" alt="" />
-                                <img className='rounded-full my-5 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p2/asset 10.png" alt="" />
-                                <img className='rounded-full my-5 hover:ring-2 hover:ring-[#417EF0] duration-300' src="./src/assets/shop/p2/asset 11.png" alt="" />
-                            </div>
-                            <div className='relative pl-14'>
-                                <img className='rounded-lg' src="./src/assets/shop/p2/asset 2.png" alt="" />
-                                <h1 className='absolute px-3 py-1 rounded-md bg-[#417EF0] font-bold text-xs text-white top-8 right-7 ' style={{ boxShadow: "0 8px 16px 0 rgba(53,119,240,.3) " }}>20% OFF</h1>
-                                <div className='absolute top-[500px] right-8'>
-                                    <a className='h-12 w-12 flex justify-center items-center bg-white rounded-full hover:bg-[#417EF0]  duration-300 hover:text-white' href="">
-                                        <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
+                        <div>
+                            <P2Slider />
                         </div>
-                  
+
                         <div className='main-div-details'>
                             <h1 className='font-bold text-4xl text-[#292930] tracking-wide mb-8'>Ella Everyday Tote</h1>
                             <h1 className='font-semibold text-2xl text-[#292930] mb-5'>$155.00 - $255.00</h1>
