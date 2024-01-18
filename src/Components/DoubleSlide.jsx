@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Slider from 'react-slick';
 import { Fade } from 'react-reveal';
 
-import { addToCart, emptyCart, removeFromCart } from '../redux/action'
+import { addToCart} from '../redux/action'
 import { useDispatch, useSelector } from 'react-redux'
 import { productList } from '../redux/ProductAction'
 
@@ -42,13 +42,6 @@ const DoubleSlide = () => {
     return (
         <>
             <div>
-
-                <section>
-                    {/* <button className='bg-black text-yellow-800' onClick={() => dispatch(addToCart(product))}>add to cart</button> */}
-                    {/* <button className='bg-yellow-500 text-red-800' onClick={() => dispatch(removeFromCart(product.name))}>remove to cart</button> */}
-                    <button className='bg-blue-500 text-black' onClick={() => dispatch(emptyCart())}>empty cart</button>
-                    
-                </section>
 
                 <div className='pb-7'>
                     <div className='container mx-auto'>
@@ -109,7 +102,7 @@ const DoubleSlide = () => {
                                                                                 before:duration-300">
                                                                                     Add to Cart</div>
                                                                             </div>
-                                                                            <div className='hover:scale-110 duration-300 inline-block ' onClick={() => dispatch(removeFromCart(item.id))}>
+                                                                            <div className='hover:scale-110 duration-300 inline-block '>
                                                                                 <div className=''><i class="fa-regular fa-eye bg-white p-3 rounded-[4px]"></i></div>
                                                                             </div>
                                                                         </div>

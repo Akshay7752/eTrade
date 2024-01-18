@@ -138,7 +138,7 @@ const HomeNavBar = () => {
                     <ul className='flex justify-between w-[20px] btn-hover hover:text-slate-100 ml-3 '>
                         <button onClick={toggleSidebar}>
                             <li className='nav-icon h-10 w-10 flex justify-center items-center rounded-full'><i class="ri-shopping-cart-line "></i></li>
-                            <h1 className='absolute h-5 w-5 rounded-full -top-1 -right-3.5 ring-2 ring-white bg-blue-600 text-xs text-white pt-0.5'>{result.length}</h1>
+                            <h1 className='absolute h-5 w-5 rounded-full -top-1 -right-3.5 ring-2 z-50 ring-white bg-blue-600 text-xs text-white pt-0.5'>{result.length}</h1>
                         </button>
                     </ul>
                     <IconSidebarHome isOpen={isSidebarOpen} onClose={toggleSidebar} />

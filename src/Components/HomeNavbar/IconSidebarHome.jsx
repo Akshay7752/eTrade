@@ -1,13 +1,17 @@
 import React, { useReducer } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { removeFromCart } from '../../redux/action'
 
 const IconSidebarHome = ({ isOpen, onClose }) => {
 
-    const cartData = useSelector((state) => state.cartData);
+    const dispatch = useDispatch();
+    const data = useSelector((state) => state.productData)
+    // console.log("data main compo from saga", data);
 
+    const cartData = useSelector((state) => state.cartData);
     let amount = cartData.length && cartData.map((item) => item.newprice).reduce((prev, next) => prev + next)
-    console.warn(amount);
+    // console.warn(amount);
 
     // const initialState = {
     //     firstCounter: 15,
@@ -58,41 +62,44 @@ const IconSidebarHome = ({ isOpen, onClose }) => {
                         <h1 className='text-3xl font-bold text-[#27272E]'>Cart review</h1>
                     </div>
 
+
                     {
                         cartData.map((item => {
                             return (
                                 <>
-                                    <div key={item.id} className='mt-10 flex relative border-b border-[#F6F7FB] pb-7 '>
-                                        <div>
-                                            <div className='absolute -top-3 -left-3 ring-2 ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:bg-[#3577F0] hover:text-white text-black  duration-300'>
-                                                <i class="fa-solid fa-xmark text-sm "></i>
-                                            </div>
-                                            <Link to="/ProductV1">
-                                                <img className="h-24 w-32 object-cover rounded-md  cursor-pointer" src={item.image}></img>
-                                            </Link>
-                                        </div>
-                                        <div className='flex justify-between w-full ml-8'>
+                                    <div >
+
+                                        <div key={item.id} className='mt-10 flex relative border-b border-[#F6F7FB] pb-7'>
                                             <div>
-                                                <div className='flex items-center'>
-                                                    <span className='text-[#FFDC60] text-sm'>
-                                                        <i class="ri-star-s-fill"></i>
-                                                        <i class="ri-star-s-fill"></i>
-                                                        <i class="ri-star-s-fill"></i>
-                                                        <i class="ri-star-s-fill"></i>
-                                                        <i class="ri-star-s-fill"></i>
-                                                    </span>
-                                                    <div>
-                                                        <h1 className='text-xs font-bold ml-2'>(64)</h1>
-                                                    </div>
+                                                <div onClick={() => dispatch(removeFromCart(item.id))} className='absolute -top-3 -left-3 ring-2 ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:bg-[#3577F0] hover:text-white text-black  duration-300'>
+                                                    <i class="fa-solid fa-xmark text-sm "></i>
                                                 </div>
-                                                <div className='my-2'>
-                                                    <Link to="/ProductV3" className="text-lg  font-bold text-[#292930] hover:text-[#3577F0] cursor-pointer duration-300 ">
-                                                        {item.name}
-                                                    </Link>
-                                                </div>
-                                                <p className="mr-16 text-[#292930] text-xl"><span>$</span>{item.newprice}</p>
+                                                <Link to="/ProductV1">
+                                                    <img className="h-24 w-32 object-cover rounded-md  cursor-pointer" src={item.image}></img>
+                                                </Link>
                                             </div>
-                                            {/* <div className='flex items-center '>
+                                            <div className='flex justify-between w-full ml-8'>
+                                                <div>
+                                                    <div className='flex items-center'>
+                                                        <span className='text-[#FFDC60] text-sm'>
+                                                            <i class="ri-star-s-fill"></i>
+                                                            <i class="ri-star-s-fill"></i>
+                                                            <i class="ri-star-s-fill"></i>
+                                                            <i class="ri-star-s-fill"></i>
+                                                            <i class="ri-star-s-fill"></i>
+                                                        </span>
+                                                        <div>
+                                                            <h1 className='text-xs font-bold ml-2'>(64)</h1>
+                                                        </div>
+                                                    </div>
+                                                    <div className='my-2'>
+                                                        <Link to="/ProductV3" className="text-lg  font-bold text-[#292930] hover:text-[#3577F0] cursor-pointer duration-300 ">
+                                                            {item.name}
+                                                        </Link>
+                                                    </div>
+                                                    <p className="mr-16 text-[#292930] text-xl"><span>$</span>{item.newprice}</p>
+                                                </div>
+                                                {/* <div className='flex items-center '>
                                                 <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:bg-[#3577F0] hover:text-white text-black duration-300' onClick={() => {
                                                     if (count.firstCounter > 1) {
                                                         dispatch({ type: 'dec1', value: 1 });
@@ -107,6 +114,7 @@ const IconSidebarHome = ({ isOpen, onClose }) => {
                                                     <i class="fa-solid fa-plus text-xs"></i>
                                                 </button>
                                             </div> */}
+                                            </div>
                                         </div>
                                     </div>
                                 </>
@@ -212,13 +220,13 @@ const IconSidebarHome = ({ isOpen, onClose }) => {
                     </div> */}
 
 
-                    <div className='mt-8  '>
+                    <div className='mt-8'>
                         <div className='flex justify-between text-xl font-bold text-[#27272E]'>
                             <p>Subtotal:</p>
                             <p>{amount}</p>
                         </div>
 
-                        <div className='flex mt-10 '>
+                        <div className='flex mt-10'>
                             <div className='relative text-center w-full py-4 rounded-md text-white text-lg font-bold z-10 mr-5'>
                                 <Link to="/Cart" href="" className='
                                     before:absolute

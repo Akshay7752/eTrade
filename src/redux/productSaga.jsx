@@ -1,10 +1,11 @@
 import { takeEvery, put } from 'redux-saga/effects'
-import { PRODUCT_LIST, SEARCH_PRODUCT, SET_PRODUCT_LIST } from './constant'
+import { PRODUCT_LIST, SEARCH_PRODUCT, SET_PRODUCT_LIST } from './Type'
+import data from '../DataA.json'
 
 function* getProducts() {
-    let data = yield fetch("http://localhost:3500/product");
-    data = yield data.json()
-    yield put({ type: SET_PRODUCT_LIST, data: data })
+    // let data = yield fetch("http://localhost:3500/ProductData");
+    // data = yield data.json()
+    yield put({ type: SET_PRODUCT_LIST,  data })
 
 
     // let data = await fetch("https://jsonplaceholder.typicode.com/posts/1");

@@ -3,10 +3,14 @@ import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
 import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { emptyCart, removeFromCart } from '../../redux/action'
 
 
 const Cart = () => {
+
+    const dispatch = useDispatch();
+    const data = useSelector((state) => state.productData);
 
     const cartData = useSelector((state) => state.cartData);
     
@@ -14,37 +18,38 @@ const Cart = () => {
     console.warn(amount);
 
     const [selectRadio, setselectradio] = useState("Free Shippping");
-    const [cart, setCart] = useState([]);
 
-    const initialState = {
-        firstCounter: 1,
-        secondCounter: 1,
-        thirdCounter: 1,
-    }
+    // const [cart, setCart] = useState([]);
 
-    const reducer = (state, action) => {
-        switch (action.type) {
+    // const initialState = {
+    //     firstCounter: 1,
+    //     secondCounter: 1,
+    //     thirdCounter: 1,
+    // }
 
-            case 'inc1':
-                return { ...state, firstCounter: state.firstCounter + action.value }
-            case 'dec1':
-                return { ...state, firstCounter: state.firstCounter - action.value }
+    // const reducer = (state, action) => {
+    //     switch (action.type) {
 
-            case 'inc2':
-                return { ...state, secondCounter: state.secondCounter + action.value }
-            case 'dec2':
-                return { ...state, secondCounter: state.secondCounter - action.value }
+    //         case 'inc1':
+    //             return { ...state, firstCounter: state.firstCounter + action.value }
+    //         case 'dec1':
+    //             return { ...state, firstCounter: state.firstCounter - action.value }
 
-            case 'inc3':
-                return { ...state, thirdCounter: state.thirdCounter + action.value }
-            case 'dec3':
-                return { ...state, thirdCounter: state.thirdCounter - action.value }
+    //         case 'inc2':
+    //             return { ...state, secondCounter: state.secondCounter + action.value }
+    //         case 'dec2':
+    //             return { ...state, secondCounter: state.secondCounter - action.value }
 
-            default:
-                return state;
-        }
-    }
-    const [count, dispatch] = useReducer(reducer, initialState);
+    //         case 'inc3':
+    //             return { ...state, thirdCounter: state.thirdCounter + action.value }
+    //         case 'dec3':
+    //             return { ...state, thirdCounter: state.thirdCounter - action.value }
+
+    //         default:
+    //             return state;
+    //     }
+    // }
+    // const [count, dispatch] = useReducer(reducer, initialState);
 
     
 
@@ -69,7 +74,7 @@ const Cart = () => {
                             <h1 className="text-2xl font-semibold text-[#292930]">
                                 Your Cart
                             </h1>
-                            <h1 className="text-sm  text-[#3577F0]">
+                            <h1 onClick={() => dispatch(emptyCart())} className="text-sm  text-[#3577F0] cursor-pointer">
                                 Clear Shoping Cart
                             </h1>
                         </div>
@@ -89,7 +94,7 @@ const Cart = () => {
                                             <div key={item.id}>
                                                 <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
                                                     <div className='flex items-center '>
-                                                        <div className=' flex justify-center items-center h-8 w-8 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  duration-300 ml-4'>
+                                                        <div onClick={() => dispatch(removeFromCart(item.id))} className=' flex justify-center items-center h-8 w-8 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  duration-300 ml-4'>
                                                             <i class="fa-solid fa-xmark text-xs"></i>
                                                         </div>
                                                         <Link to="/ProductV1">
@@ -100,9 +105,9 @@ const Cart = () => {
                                                         {item.name}
                                                     </Link>
                                                     <div className='relative'>
-                                                        <p className="w-28 absolute -right-3 -top-4 text-gray-500 font-semibold text-xl">{item.newprice}</p>
+                                                        <p className="w-28 absolute -right-3 -top-4 text-gray-500 font-semibold text-xl"><span>$</span>{item.newprice}</p>
                                                     </div>
-                                                    <div className='flex items-center mr-44'>
+                                                    {/* <div className='flex items-center mr-44'>
                                                         <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
                                                             if (count.firstCounter > 1) {
                                                                 dispatch({ type: 'dec1', value: 1 });
@@ -116,7 +121,7 @@ const Cart = () => {
                                                         <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc1', value: 1 })}>
                                                             <i class="fa-solid fa-plus text-xs"></i>
                                                         </button>
-                                                    </div>
+                                                    </div> */}
                                                     <div className='relative'>
                                                         <p className="w-28 absolute right-5 -top-4 text-gray-500 font-semibold text-xl ">{item.oldprice}</p>
                                                     </div>
