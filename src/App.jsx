@@ -1,13 +1,17 @@
 import React from 'react'
 import AllPages from './PAGES/AllPagesComponents/AllPages'
-
+import { Provider } from 'react-redux'
+import store from './redux/store'
 
 
 const App = () => {
   return (
-    <div>
-      <AllPages/>
-    </div>
+    <>
+      <Provider store={store}>
+        <AllPages />
+      </Provider>
+    </>
+
   )
 }
 

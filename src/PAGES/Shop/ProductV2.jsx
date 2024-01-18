@@ -49,7 +49,7 @@ const ProductV2 = () => {
                         </div>
 
                         <div className='main-div-details'>
-                            <h1 className='font-bold text-4xl text-[#292930] tracking-wide mb-8'>Ella Everyday Tote</h1>
+                            <h1 className='font-bold text-4xl text-[#292930] tracking-wide mb-8'>Squre Cateye Sunglasses</h1>
                             <h1 className='font-semibold text-2xl text-[#292930] mb-5'>$155.00 - $255.00</h1>
                             <div className='flex border-b-2 border-gray-200'>
                                 <span className='text-[#FFA800]'>

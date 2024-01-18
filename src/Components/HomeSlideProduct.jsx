@@ -2,6 +2,7 @@ import React from 'react'
 import dataJson from '../Data.json'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick';
+import { Fade } from 'react-reveal';
 
 const HomeSlideProduct = () => {
     const settings = {
@@ -50,7 +51,9 @@ const HomeSlideProduct = () => {
                                                 <div className='relative overflow-hidden rounded-[35px]'>
                                                     <div>
                                                         <div className='w-[350px] h-[350px] rounded-full overflow-hidden'>
-                                                            <img className='w-[100%] h-[100%] rounded-full object-cover group-hover:scale-110 duration-200' src={Data.image} alt="" />
+                                                            <Fade big>
+                                                                <img className='w-[100%] h-[100%] rounded-full object-cover group-hover:scale-110 duration-200' src={Data.image} alt="" />
+                                                            </Fade>
                                                         </div>
 
                                                         <h1 className='absolute px-2 py- rounded-[4px] bg-[#417EF0] font-semibold text-sm text-white top-6 right-7 ' style={{ boxShadow: "0 8px 16px 0 rgba(53,119,240,.3) " }}>{Data.offer}</h1>

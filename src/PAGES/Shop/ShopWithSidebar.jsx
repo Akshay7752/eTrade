@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import "../Shop/Check.css"
 import Slider from 'react-slider'
 
+
 const ShopWithSidebar = () => {
     const [isOpen1, setIsOpen1] = useState(true);
     const toggleAccordion1 = () => {

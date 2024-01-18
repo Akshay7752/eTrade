@@ -56,10 +56,10 @@ export default class P5Slider extends Component {
             <div className="">
                 <div className="">
                     <div className=' relative'>
-                        <div className='absolute top-[329px] -left-[38px] z-10 hover:scale-110 duration-300'>
+                        <div className='absolute top-[329px] -left-[38px] z-10 hover:scale-110 duration-300 '>
                             <button onClick={handlePrev} className='text-gray-500 '><i class="ri-arrow-left-line  bg-[#F6F7FB] p-4 rounded-md"></i></button>
                         </div>
-                        <div className='absolute top-[329px] -right-[38px]  z-10 hover:scale-110 duration-300'>
+                        <div className='absolute top-[329px] -right-[38px]  z-10 hover:scale-110 duration-300 '>
                             <button onClick={handleNext} className='text-gray-500'><i class="ri-arrow-right-line bg-[#F6F7FB] p-4 rounded-md"></i></button>
                         </div>
 

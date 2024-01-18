@@ -47,7 +47,7 @@ import ScrollIndicator from '../../Components/ScrollIndicator'
 export default function AllPages() {
   return (
     <>
-      <div className='select-none'>
+      <div>
         <BrowserRouter>
           <ScrollIndicator />
           <ScrollToTop />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-reveal';
 import Slider from 'react-slick'
 
 const Categories = () => {
@@ -39,82 +40,84 @@ const Categories = () => {
                     </div>
                 </div>
 
-                <div className='mt-10'>
-                    <Slider ref={(c) => (slider = c)} {...settings}>
-                        <div href='#top-scroll' className=" border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer ">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 15.png" alt="" />
+                <Fade clear>
+                    <div className='mt-10'>
+                        <Slider ref={(c) => (slider = c)} {...settings}>
+                            <div href='#top-scroll' className=" border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer ">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 15.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Phones</p>
                             </div>
-                            <p className='text-gray-800'>Phones</p>
-                        </div>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 16.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Computers</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 17.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Accessories</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 18.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Laptops</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 19.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Monitors</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 10.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Networking</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>PC Gaming</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 12.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Smartwatches</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 13.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Headphones</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 14.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Camera & Photo</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Video Games</p>
-                        </a>
-                        <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
-                            <div className="flex justify-center">
-                                <img className="mb-3" src="./src/assets/Home/asset 12.png" alt="" />
-                            </div>
-                            <p className='text-gray-800'>Sports</p>
-                        </a>
-                    </Slider>
-                </div>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 16.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Computers</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 17.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Accessories</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 18.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Laptops</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px]  text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 19.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Monitors</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 10.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Networking</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>PC Gaming</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 12.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Smartwatches</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 13.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Headphones</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 14.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Camera & Photo</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 11.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Video Games</p>
+                            </a>
+                            <a href='#top-scroll' className="border border-gray-200 rounded-md py-[28px] px-[12px] text-center hover:shadow-2xl duration-500 cursor-pointer">
+                                <div className="flex justify-center">
+                                    <img className="mb-3" src="./src/assets/Home/asset 12.png" alt="" />
+                                </div>
+                                <p className='text-gray-800'>Sports</p>
+                            </a>
+                        </Slider>
+                    </div>
+                </Fade>
             </div>
         </>
     )

@@ -14,18 +14,12 @@ import FeedBack from '../../Components/FeedBack'
 import DoubleSlide from '../../Components/DoubleSlide'
 import HomeSlideProduct from '../../Components/HomeSlideProduct'
 import Categories from '../../Components/Categories'
-
-import { Navigation, Pagination, Scrollbar, Zoom } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css/scrollbar';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-
+import { Fade } from 'react-reveal'
 
 
 const Home = () => {
 
+    
     return (
         <>
             <div className='Body bg-white' id='top-scroll'>
@@ -43,20 +37,22 @@ const Home = () => {
                         <img className='absolute right-[700px] -bottom-20' src="./src/assets/Home/asset 8.png" alt="" />
                         <img className='absolute right-[100px] -bottom-12' src="./src/assets/Home/asset 9.png" alt="" />
                         <div>
-                            {/* <div className='absolute right-[450px] bottom-40'>
-                                <img className=' ' src="./src/assets/Home/asset 6.png" alt="" />
-                                <div className='absolute top-[15%] left-[30%] bg-white rounded-full'>
-                                    <div className='h-28 w-28 flex justify-center items-center'>
-                                        <div>
-                                            <h1 className='text-gray-500 text-lg text-center'>From</h1>
-                                            <h1 className='text-[#3577F0] text-xl  font-semibold'>$49.00</h1>
+                            <Fade bottom>
+                                <div className='absolute right-[450px] bottom-40'>
+                                    <img className=' ' src="./src/assets/Home/asset 6.png" alt="" />
+                                    <div className='absolute top-[15%] left-[30%] bg-white rounded-full'>
+                                        <div className='h-28 w-28 flex justify-center items-center'>
+                                            <div>
+                                                <h1 className='text-gray-500 text-lg text-center'>From</h1>
+                                                <h1 className='text-[#3577F0] text-xl  font-semibold'>$49.00</h1>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div> */}
-                            {/* <div>
-                                <img className='w-40 absolute right-[270px] bottom-32' src="./src/assets/Home/asset 7.png" alt="" />
-                            </div> */}
+                                <div className='w-40 absolute right-[270px] bottom-32'>
+                                    <img src="./src/assets/Home/asset 7.png" alt="" />
+                                </div>
+                            </Fade>
                         </div>
                         <div className='absolute left-[45%] bottom-10'>
                             <ul>
@@ -69,15 +65,17 @@ const Home = () => {
                     </div>
                     <div className="container mx-auto">
                         <div className='BACKGROUND-DETAIL-HEADPHONE absolute top-96'>
-                            <div className='flex mb-4'>
-                                <i className="ri-fire-fill h-6 w-6 text-base bg-[#FF497C] text-white rounded-full flex items-center justify-center"></i>
-                                <h1 className='text-[#FF497C] font-bold text-sm flex items-center ml-2'> Hot Deal In This Week</h1>
-                            </div>
-                            <p className='font-bold text-6xl text-[#292930] tracking-wide leading-[75px] mb-10'>Roco Wireless<br /> Headphone</p>
+                            <Fade bottom>
 
-                            <div className='flex items-center'>
-                                <div className="BUTTON">
-                                    <Link to="/ShopNoSidebar" href="#" className="px-9 py-5 z-10 bg-white font-bold rounded-md relative 
+                                <div className='flex mb-4'>
+                                    <i className="ri-fire-fill h-6 w-6 text-base bg-[#FF497C] text-white rounded-full flex items-center justify-center"></i>
+                                    <h1 className='text-[#FF497C] font-bold text-sm flex items-center ml-2'> Hot Deal In This Week</h1>
+                                </div>
+                                <p className='font-bold text-6xl text-[#292930] tracking-wide leading-[75px] mb-10'>Roco Wireless<br /> Headphone</p>
+
+                                <div className='flex items-center'>
+                                    <div className="BUTTON">
+                                        <Link to="/ShopNoSidebar" href="#" className="px-9 py-5 z-10 bg-white font-bold rounded-md relative 
                                 before:absolute
                                 before:contetn-['']
                                 before:px-10
@@ -91,32 +89,33 @@ const Home = () => {
                                 before:-z-10
                                 before:hover:scale-110
                                 before:duration-300">
-                                        <i class="ri-shopping-cart-line mr-2"></i>Shop Now </Link>
-                                </div>
-
-                                <div className='flex ml-8'>
-                                    <div className="IMAGES-CIRCLE">
-                                        <ul className="flex">
-                                            <li className=" border-2 rounded-full "><img src="./src/assets/Home/asset 2.png" alt="" /></li>
-                                            <li className="-ml-5 border-2 rounded-full border-white"><img src="./src/assets/Home/asset 3.png" alt="" /></li>
-                                            <li className="-ml-5 border-2 rounded-full border-white"><img src="./src/assets/Home/asset 4.png" alt="" /></li>
-                                            <li className="-ml-5 border-2 rounded-full border-white" ><img src="./src/assets/Home/asset 5.png" alt="" /></li>
-                                        </ul>
+                                            <i class="ri-shopping-cart-line mr-2"></i>Shop Now </Link>
                                     </div>
-                                    <div className='STARS ml-5'>
-                                        <span className='text-[#FFA800]'>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-line"></i>
-                                        </span>
-                                        <div>
-                                            <h1 className='text-xs font-bold'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
+
+                                    <div className='flex ml-8'>
+                                        <div className="IMAGES-CIRCLE">
+                                            <ul className="flex">
+                                                <li className=" border-2 rounded-full "><img src="./src/assets/Home/asset 2.png" alt="" /></li>
+                                                <li className="-ml-5 border-2 rounded-full border-white"><img src="./src/assets/Home/asset 3.png" alt="" /></li>
+                                                <li className="-ml-5 border-2 rounded-full border-white"><img src="./src/assets/Home/asset 4.png" alt="" /></li>
+                                                <li className="-ml-5 border-2 rounded-full border-white" ><img src="./src/assets/Home/asset 5.png" alt="" /></li>
+                                            </ul>
+                                        </div>
+                                        <div className='STARS ml-5'>
+                                            <span className='text-[#FFA800]'>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-fill"></i>
+                                                <i class="ri-star-s-line"></i>
+                                            </span>
+                                            <div>
+                                                <h1 className='text-xs font-bold'>100+ <span className='text-gray-600 text-xs font-semibold'>Reviews</span> </h1>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </Fade>
                         </div>
 
                         <div className='BACKGROUND-DETAIL-WATCH absolute top-96 hidden'>
@@ -169,36 +168,6 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
-                        <div>
-                            <Swiper className="mySwiper swiper-container w-[840px] pr-[150px] absolute -right-16 top-48 z-10"
-                                slidesPerview={2}
-                                onSwiper={(swiper) => console.log(swiper)}
-                                pagination={{ clickable: true }}
-                                onSlideChange={() => { Zoom }}
-                                onReachEnd={() => { false }}
-                                loop={() => { true }}
-                                modules={[Pagination]}
-
-                            >
-
-                                <SwiperSlide className=''><img className='image-1' src="./src/assets/Home/asset 6.png" alt="" />
-                                    <div className='round w-24 h-24 text-center pt-5 absolute top-10 right-[50%] z-10 bg-white  rounded-full transition-[0.5s]'>
-                                        <h1 className='text-gray-500 text-base'>From</h1>
-                                        <h3 className='font-bold text-lg text-blue-500'>$ 49.00</h3>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide className=''><img className='image-1' src="./src/assets/Home/asset 7.png" alt="" />
-                                    <div className='round w-24 h-24 text-center pt-5 absolute top-10 right-[50%] z-10 bg-white  rounded-full'>
-                                        <h1 className='text-gray-500 text-base'>From</h1>
-                                        <h3 className='font-bold text-lg text-blue-500'>$ 49.00</h3>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide><img className='image-1' src="./src/assets/Home/asset 6.png" alt="" /></SwiperSlide>
-                                <SwiperSlide><img className='image-1' src="./src/assets/Home/asset 7.png" alt="" /></SwiperSlide>
-
-                            </Swiper>
-                        </div>
                     </div>
                 </section>
 
@@ -206,6 +175,7 @@ const Home = () => {
                     <a href="#top-scroll" className='absolute right-10'><i class="fa-solid fa-arrow-up bg-[#3577F0] p-4 rounded-md text-white"></i></a>
                 </section>
 
+                
                 <section className='CATEGORIES container mx-auto '>
                     <Categories />
                 </section>
@@ -294,7 +264,11 @@ const Home = () => {
                             <div className='flex justify-between items-center outline outline-1 outline-gray-200 rounded-md p-7 group hover:shadow-lg hover:shadow-zinc-100 hover:duration-500 hover:outline-none duration-[0.3s]'>
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
-                                        <Link to="/ProductV1"><img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" /></Link>
+                                        <Link to="/ProductV1">
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 32.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -323,7 +297,10 @@ const Home = () => {
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
                                         <Link to="/ProductV1">
-                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" /></Link>
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 33.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -352,7 +329,10 @@ const Home = () => {
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
                                         <Link to="/ProductV1">
-                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 34.png" alt="" /></Link>
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 34.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -381,7 +361,10 @@ const Home = () => {
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
                                         <Link to="/ProductV1">
-                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 35.png" alt="" /></Link>
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 35.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -410,7 +393,10 @@ const Home = () => {
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
                                         <Link to="/ProductV1">
-                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 36.png" alt="" /></Link>
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 36.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -439,7 +425,10 @@ const Home = () => {
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
                                         <Link to="/ProductV1">
-                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 37.png" alt="" /></Link>
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 37.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -468,7 +457,10 @@ const Home = () => {
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
                                         <Link to="/ProductV1">
-                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 38.png" alt="" /></Link>
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 38.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>
@@ -497,7 +489,10 @@ const Home = () => {
                                 <div className='flex items-center '>
                                     <div className='overflow-hidden rounded-md'>
                                         <Link to="/ProductV1">
-                                            <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 39.png" alt="" /></Link>
+                                            <Fade big>
+                                                <img className='rounded-md group-hover:scale-110 duration-500' src="./src/assets/home/asset 39.png" alt="" />
+                                            </Fade>
+                                        </Link>
                                     </div>
                                     <div className='pl-8 leading-7'>
                                         <div className='flex items-center'>

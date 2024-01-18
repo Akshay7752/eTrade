@@ -3,9 +3,16 @@ import { AllTopBar } from '../../Components/AllDropdown/AllDropdownHover'
 import { AllNavBar, NavBottom } from '../../Components/AllNavbar/AllNavBar'
 import Footer from '../../Components/Footer/Footer'
 import { Link } from 'react-router-dom'
-import dataJson from '../../Data.json'
+import { useSelector } from 'react-redux'
+
 
 const Cart = () => {
+
+    const cartData = useSelector((state) => state.cartData);
+    
+   let amount = cartData.length && cartData.map((item) => item.newprice).reduce((prev,next) => prev + next)
+    console.warn(amount);
+
     const [selectRadio, setselectradio] = useState("Free Shippping");
     const [cart, setCart] = useState([]);
 
@@ -38,6 +45,8 @@ const Cart = () => {
         }
     }
     const [count, dispatch] = useReducer(reducer, initialState);
+
+    
 
     return (
         <>
@@ -73,98 +82,50 @@ const Cart = () => {
                                 <h1 className="text-xl font-semibold -mr-20">Subtotal</h1>
                             </div>
 
-                            <div>
-                                <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
-                                    <div className='flex items-center '>
-                                        <div className=' flex justify-center items-center h-8 w-8 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  duration-300 ml-4'>
-                                            <i class="fa-solid fa-xmark text-xs"></i>
-                                        </div>
-                                        <Link to="/ProductV1">
-                                            <img className="h-20 w-20 ml-20 cursor-pointer" src="./src/assets/pages/wishlist/asset 2.png"></img>
-                                        </Link>
-                                    </div>
-                                    <Link to="/ProductV1" className="text-xl  font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer -ml-36 duration-300">
-                                        Wireless PS Handler
-                                    </Link>
-                                    <p className="mr-2 -ml-7 text-gray-500 font-semibold text-xl">$124.00</p>
-                                    <div className='flex items-center mr-6'>
-                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
-                                            if (count.firstCounter > 0) {
-                                                dispatch({ type: 'dec1', value: 1 });
-                                            }
-                                        }}>
-                                            <i class="fa-solid fa-minus text-xs"></i>
-                                        </button>
+                            {
+                                cartData.map((item => {
+                                    return (
+                                        <>
+                                            <div key={item.id}>
+                                                <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
+                                                    <div className='flex items-center '>
+                                                        <div className=' flex justify-center items-center h-8 w-8 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  duration-300 ml-4'>
+                                                            <i class="fa-solid fa-xmark text-xs"></i>
+                                                        </div>
+                                                        <Link to="/ProductV1">
+                                                            <img className="h-20 w-20 ml-20 cursor-pointer" src={item.image}></img>
+                                                        </Link>
+                                                    </div>
+                                                    <Link to="/ProductV1" className="text-xl w-80 font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer -ml-36 duration-300 ">
+                                                        {item.name}
+                                                    </Link>
+                                                    <div className='relative'>
+                                                        <p className="w-28 absolute -right-3 -top-4 text-gray-500 font-semibold text-xl">{item.newprice}</p>
+                                                    </div>
+                                                    <div className='flex items-center mr-44'>
+                                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  text-black duration-300' onClick={() => {
+                                                            if (count.firstCounter > 1) {
+                                                                dispatch({ type: 'dec1', value: 1 });
+                                                            }
+                                                        }}>
+                                                            <i class="fa-solid fa-minus text-xs"></i>
+                                                        </button>
 
-                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.firstCounter}</h1>
+                                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.firstCounter}</h1>
 
-                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc1', value: 1 })}>
-                                            <i class="fa-solid fa-plus text-xs"></i>
-                                        </button>
-                                    </div>
-                                    <p className="mr-16 text-gray-500 font-semibold text-xl">$275.00</p>
-                                </div>
-                                <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
-                                    <div className='flex items-center '>
-                                        <div className=' flex justify-center items-center h-8 w-8 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  duration-300 ml-4'>
-                                            <i class="fa-solid fa-xmark text-xs"></i>
-                                        </div>
-                                        <Link to="/ProductV2">
-                                            <img className="h-20 w-20 ml-20 cursor-pointer" src="./src/assets/pages/wishlist/asset 3.png"></img>
-                                        </Link>
-                                    </div>
-                                    <Link to="/ProductV2" className="text-xl  font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer -ml-36 duration-300">
-                                        Gradient Light Keyboard
-                                    </Link>
-                                    <p className="mr-2 -ml-16 text-gray-500 font-semibold text-xl">$124.00</p>
-                                    <div className='flex items-center mr-6'>
-                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300' onClick={() => {
-                                            if (count.secondCounter > 0) {
-                                                dispatch({ type: 'dec2', value: 1 });
-                                            }
-                                        }}>
-                                            <i class="fa-solid fa-minus text-xs"></i>
-                                        </button>
-
-                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.secondCounter}</h1>
-
-                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc2', value: 1 })}>
-                                            <i class="fa-solid fa-plus text-xs"></i>
-                                        </button>
-                                    </div>
-                                    <p className="mr-16 text-gray-500 font-semibold text-xl">$275.00</p>
-                                </div>
-                                <div className="flex justify-between py-4 items-center border-b-2 border-gray-100">
-                                    <div className='flex items-center '>
-                                        <div className=' flex justify-center items-center h-8 w-8 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2  duration-300 ml-4'>
-                                            <i class="fa-solid fa-xmark text-xs"></i>
-                                        </div>
-                                        <Link to="/ProductV3">
-                                            <img className="h-20 w-20 ml-20 cursor-pointer" src="./src/assets/pages/wishlist/asset 4.png"></img>
-                                        </Link>
-                                    </div>
-                                    <Link to="/ProductV3" className="text-xl  font-semibold text-[#292930] hover:text-[#3577F0] cursor-pointer -ml-36 duration-300">
-                                        HD CC Camera
-                                    </Link>
-                                    <p className="mr-2 ml-7 text-gray-500 font-semibold text-xl">$124.00</p>
-                                    <div className='flex items-center mr-6'>
-                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300' onClick={() => {
-                                            if (count.thirdCounter > 0) {
-                                                dispatch({ type: 'dec3', value: 1 });
-                                            }
-                                        }}>
-                                            <i class="fa-solid fa-minus text-xs"></i>
-                                        </button>
-
-                                        <h1 className='font-semibold text-lg w-14 text-center'>{count.thirdCounter}</h1>
-
-                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc3', value: 1 })}>
-                                            <i class="fa-solid fa-plus text-xs"></i>
-                                        </button>
-                                    </div>
-                                    <p className="mr-16 text-gray-500 font-semibold text-xl">$275.00</p>
-                                </div>
-                            </div>
+                                                        <button className='ring-white flex justify-center items-center h-7 w-7 bg-[#F6F7FB] rounded-full cursor-pointer hover:ring-[#3577F0]  hover:ring-2 text-black duration-300 text-base' onClick={() => dispatch({ type: 'inc1', value: 1 })}>
+                                                            <i class="fa-solid fa-plus text-xs"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div className='relative'>
+                                                        <p className="w-28 absolute right-5 -top-4 text-gray-500 font-semibold text-xl ">{item.oldprice}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    )
+                                }))
+                            }
                         </div>
 
                         <div className='grid grid-cols-2 pt-10 gap-10'>
@@ -188,19 +149,19 @@ const Cart = () => {
                                 <h1 className='text-xl font-semibold mb-8'>Order Summary</h1>
                                 <div className='flex text-base font-semibold mb-5 border-b-2 pb-4 '>
                                     <h1 className='w-56'>Subtotal</h1>
-                                    <h1>$117.00</h1>
+                                    <span>{amount}</span>
                                 </div>
                                 <div className='flex text-base mb-5 border-b-2 pb-4'>
                                     <h1 className='font-semibold w-56'>Shipping</h1>
                                     <div>
                                         <ul className='leading-7'>
-                                            <li><input type="radio" checked={selectRadio === "Free Shippping"} onChange={() => setselectradio("Free Shippping")}/>
+                                            <li><input type="radio" checked={selectRadio === "Free Shippping"} onChange={() => setselectradio("Free Shippping")} />
                                                 <label className='ml-2'>Free Shippping</label>
                                             </li>
-                                            <li><input type="radio" checked={selectRadio === "Local: $35.00"} onChange={() => setselectradio("Local: $35.00")}/>
+                                            <li><input type="radio" checked={selectRadio === "Local: $35.00"} onChange={() => setselectradio("Local: $35.00")} />
                                                 <label className='ml-2'>Local: $35.00</label>
                                             </li>
-                                            <li><input type="radio" checked={selectRadio === "Flat rate: $12.00"} onChange={() => setselectradio("Flat rate: $12.00")}/>
+                                            <li><input type="radio" checked={selectRadio === "Flat rate: $12.00"} onChange={() => setselectradio("Flat rate: $12.00")} />
                                                 <label className='ml-2'>Flat rate: $12.00</label>
                                             </li>
                                         </ul>
